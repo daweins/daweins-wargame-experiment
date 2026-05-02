@@ -1,0 +1,43 @@
+# Local secrets and machine-specific configuration
+.env
+.env.*
+!.env.example
+*.local
+*.secret
+*.secrets
+secrets/
+credentials/
+private/
+
+# Agent runtime state that may contain prompts, logs, diffs, or local paths
+.copilot-tracking/agentic/runs/
+.copilot-tracking/private/
+.copilot-tracking/tmp/
+.copilot-tracking/**/*.log
+.copilot-tracking/**/*.jsonl
+
+# Common build and editor output
+.vscode/settings.json
+.vscode/mcp.json
+.vs/
+bin/
+obj/
+build/
+dist/
+out/
+logs/
+tmp/
+temp/
+
+# Game engine output and large imported assets
+.godot/
+.import/
+export_presets.cfg
+*.pck
+*.zip
+*.tar
+*.tar.gz
+
+# OS noise
+.DS_Store
+Thumbs.db
