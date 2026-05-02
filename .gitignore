@@ -20,6 +20,8 @@ private/
 .vscode/settings.json
 .vscode/mcp.json
 .vs/
+__pycache__/
+*.py[cod]
 bin/
 obj/
 build/

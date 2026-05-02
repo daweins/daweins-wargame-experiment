@@ -14,9 +14,24 @@ that objective with minimal human blocking.
 
 ## Product Direction
 
-The first product direction is a deterministic, Advance Wars-like tactical
-combat game that runs on this laptop and can be tested on Steam Deck without
-Steam Store publication.
+The first product direction is a near-future sci-fi tactical combat game that
+leans closest to classic Advance Wars. It should run on this laptop and be
+testable on Steam Deck without Steam Store publication.
+
+The game should use Godot 4.x with C# if practical. It should focus on
+controller-first 20 to 40 minute single-player battles against AI, with CO
+powers, static HQ capture stakes, terrain, light logistics and supply, light
+within-mission veterancy, 16-bit-era pixel art, and minor seeded randomness that
+remains mostly skill-weighted.
+
+The first playable prototype should be a fixed-unit terrain chokepoint mission:
+hold the player HQ, rescue or protect a stranded scout, defeat the remaining
+enemies, and show an objective, speed, technique, power, and total score.
+
+The current non-goals are multiplayer, map editor, weather systems, persistent
+individual combat units, and Fire Emblem-style named-unit attachment. Broader
+campaign progression may include leaders, experience, unit unlocks, and unit
+customization or improvement.
 
 ## Autonomy Policy
 

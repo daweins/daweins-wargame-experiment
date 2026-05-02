@@ -28,7 +28,7 @@ critique, and experiments.
 
 Evidence: The next pass can resume without relying on chat history.
 
-### E002: Testable Godot prototype
+### E002 Outcome: Testable Godot prototype
 
 Status: `proposed`
 
@@ -50,8 +50,25 @@ Evidence: Backlog changes reflect identified risks or falsifying tests.
 
 ## Active Experiments
 
-No active experiments yet.
+### E004: First mission trial playthrough
+
+Status: `active`
+
+Hypothesis: A thin Godot C# vertical slice can support a useful first human
+trial before campaign systems, production, fog, or polished art exist.
+
+Method: Let the user play the first mission, then collect notes on objective
+clarity, control friction, AI pressure, scoring, and 16-bit pixel-art
+readability.
+
+Evidence: Awaiting manual playthrough feedback.
 
 ## Completed Experiments
 
-No completed experiments yet.
+### E002: Testable Godot prototype
+
+Outcome: `complete`
+
+Evidence: A Godot C# project references a plain C# rules core. The smoke test
+runner validates movement, terrain forecast, scout rescue, HQ defeat, replay
+hash determinism, AI pressure, and score categories outside Godot.
