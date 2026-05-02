@@ -14,6 +14,42 @@ details.
 
 ## 2026-05-02
 
+### Board readability and road cleanup
+
+Objective: Respond to feedback that the running mission was hard to read and
+that the road art was distracting.
+
+Actions:
+
+* Replaced the generated diagonal road tile with a calmer full-tile dirt road.
+* Reduced grass, cover, and ridge texture noise in the terrain generator.
+* Added a subtle dark backing plate behind units so silhouettes separate from
+  terrain.
+* Softened the visible board grid and wrapped the unit-shape legend text in the
+  side panel.
+* Regenerated `terrain.png` from the repeatable sprite generator.
+
+Verification:
+
+* The user inspected the running prototype and said the cleanup is looking much
+  better.
+* `dotnet run --project .\src\Wargame.SmokeTests\Wargame.SmokeTests.csproj`
+  passes 10 smoke checks and still proves player-side AI victory on turn 3.
+* `dotnet build .\game\WargamePrototype\WargamePrototype.sln` succeeds.
+* Godot headless startup succeeds with the cleaned terrain sheet.
+* `python -m py_compile .\scripts\assets\generate_prototype_sprites.py`
+  succeeds.
+* VS Code diagnostics report no errors for the touched C# and Python files.
+
+Critique:
+
+* The terrain is less noisy and has positive running-window feedback. Screenshot
+  capture is still useful for durable visual evidence, but the immediate road
+  readability problem is no longer blocking.
+
+Next action: Keep this cleaner terrain pass as the current visual baseline and
+move to screenshot evidence or the next tactical system slice.
+
 ### SNES and DS style sprite upgrade
 
 Objective: Move the prototype art up from 8-bit-like sheets toward a richer

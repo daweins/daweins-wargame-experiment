@@ -16,7 +16,7 @@ public partial class BattleController : Control
     private readonly Color _cover = new("#356c54");
     private readonly Color _enemy = new("#e45d47");
     private readonly Color _enemyDark = new("#7d2431");
-    private readonly Color _grid = new("#253244");
+    private readonly Color _grid = new("#1b2735aa");
     private readonly Color _hq = new("#7457c7");
     private readonly Color _panel = new("#162130");
     private readonly Color _plain = new("#6c9e5f");
@@ -484,9 +484,10 @@ public partial class BattleController : Control
         var font = GetThemeDefaultFont();
         foreach (var unit in _state.Units.Where(unit => unit.IsAlive))
         {
-            var rect = TileRect(unit.Position).Grow(-4);
+            var rect = TileRect(unit.Position).Grow(-5);
             var teamColor = unit.Team == Team.Player ? _player : _enemy;
             var baseRect = new Rect2(rect.Position + new Vector2(5, rect.Size.Y - 16), new Vector2(rect.Size.X - 10, 12));
+            DrawRect(new Rect2(rect.Position + new Vector2(4, 7), new Vector2(rect.Size.X - 8, rect.Size.Y - 4)), new Color("#0509107f"));
             DrawRect(new Rect2(baseRect.Position + new Vector2(4, 3), baseRect.Size), new Color("#0509109f"));
             DrawRect(baseRect, new Color("#101820"));
             DrawRect(baseRect.Grow(-2), teamColor);
@@ -637,8 +638,7 @@ public partial class BattleController : Control
         DrawRect(new Rect2(PanelX + 27, yPosition - 9, 10, 4), new Color("#fff0a0"));
         DrawString(font, new Vector2(PanelX + 46, yPosition), "Yellow ring = stranded Scout-7", HorizontalAlignment.Left, 290, 14, _text);
         yPosition += 22;
-        DrawString(font, new Vector2(PanelX + 24, yPosition), "Shapes: soldier = infantry, tank = armor, wedge = scout", HorizontalAlignment.Left, 360, 14, _text);
-        yPosition += 20;
+        yPosition = DrawWrappedLine(font, "Shapes: soldier = infantry, tank = armor, wedge = scout", yPosition, 14, _text, 41, 2);
     }
 
     private void DrawLegendSwatch(Vector2 position, Color light, Color dark)

@@ -17,7 +17,10 @@ mission as a good tactical first mission. A first graphics overhaul is now in
 place for the accepted mission baseline, and the board now uses PNG sprite
 sheets for terrain and unit frames instead of procedural rectangle art. The
 latest sprite pass uses 64x64 sheets with richer SNES and DS-style shading and
-has been positively reviewed by the user.
+has been positively reviewed by the user. Follow-up visual feedback found the
+running board hard to read and the road tiles distracting, so the latest pass
+calms the road tile, reduces terrain noise, softens the board grid, and adds a
+subtle unit backing plate for readability.
 
 ## Active Mode
 
@@ -63,6 +66,9 @@ playthrough feedback and tune the first mission.
 * Added a repeatable sprite generator and upgraded the sheets to native 64x64
   frames with richer terrain detail, unit silhouettes, outlines, and palette
   depth.
+* Cleaned up the generated terrain after running-window feedback: calmer road
+  art, quieter plains and ridges, softer grid lines, unit backing plates, and a
+  wrapped side-panel legend.
 
 ## Next Best Actions
 

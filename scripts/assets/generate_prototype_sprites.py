@@ -140,38 +140,40 @@ def draw_tile_border(pixels: Canvas, top: Color, bottom: Color) -> None:
 
 def tile_plain() -> Canvas:
     """Create a grassy plain tile."""
-    pixels = create_canvas(SPRITE_SIZE, SPRITE_SIZE, (89, 142, 91, 255))
+    pixels = create_canvas(SPRITE_SIZE, SPRITE_SIZE, (84, 137, 87, 255))
     for row in range(SPRITE_SIZE):
-        shade = row // 9
-        color = (94 + shade * 3, 150 + shade * 2, 92 + shade, 255)
+        shade = row // 16
+        color = (86 + shade * 2, 141 + shade * 3, 88 + shade * 2, 255)
         rect(pixels, 0, row, SPRITE_SIZE, 1, color)
-    dither(pixels, (118, 176, 104, 255), (67, 119, 77, 255), 6)
-    for blade_column, blade_row in ((7, 13), (20, 9), (35, 18), (48, 12), (11, 43), (30, 38), (51, 49)):
-        rect(pixels, blade_column, blade_row, 9, 2, (133, 191, 111, 255))
-        rect(pixels, blade_column + 2, blade_row + 3, 6, 2, (54, 105, 68, 255))
-    draw_tile_border(pixels, (132, 188, 116, 255), (58, 101, 68, 255))
+    dither(pixels, (103, 158, 95, 255), (67, 112, 76, 255), 12)
+    for blade_column, blade_row in ((9, 14), (29, 20), (49, 13), (15, 43), (42, 48)):
+        rect(pixels, blade_column, blade_row, 7, 2, (122, 176, 104, 255))
+        rect(pixels, blade_column + 2, blade_row + 4, 4, 2, (58, 103, 70, 255))
+    draw_tile_border(pixels, (117, 170, 106, 255), (50, 89, 63, 255))
     return pixels
 
 
 def tile_road() -> Canvas:
-    """Create a worn road tile."""
-    pixels = create_canvas(SPRITE_SIZE, SPRITE_SIZE, (74, 127, 85, 255))
-    polygon(pixels, [(0, 15), (63, 9), (63, 49), (0, 56)], (172, 135, 83, 255))
-    polygon(pixels, [(0, 12), (63, 7), (63, 12), (0, 18)], (221, 181, 112, 255))
-    polygon(pixels, [(0, 53), (63, 47), (63, 54), (0, 61)], (95, 76, 55, 255))
-    for pebble_column, pebble_row in ((8, 28), (17, 37), (29, 26), (42, 34), (54, 24)):
-        rect(pixels, pebble_column, pebble_row, 6, 2, (229, 197, 129, 255))
-        rect(pixels, pebble_column + 2, pebble_row + 4, 5, 2, (112, 88, 59, 255))
-    rect(pixels, 2, 2, 14, 4, (104, 160, 94, 255))
-    rect(pixels, 45, 56, 13, 3, (47, 94, 65, 255))
-    draw_tile_border(pixels, (108, 165, 99, 255), (54, 92, 68, 255))
+    """Create a clear compact dirt road tile."""
+    pixels = create_canvas(SPRITE_SIZE, SPRITE_SIZE, (166, 132, 82, 255))
+    for row in range(SPRITE_SIZE):
+        shade = abs(row - 32) // 12
+        color = (180 - shade * 7, 143 - shade * 5, 88 - shade * 4, 255)
+        rect(pixels, 0, row, SPRITE_SIZE, 1, color)
+    rect(pixels, 0, 0, SPRITE_SIZE, 2, (207, 164, 100, 255))
+    rect(pixels, 0, 61, SPRITE_SIZE, 3, (103, 79, 53, 255))
+    rect(pixels, 0, 30, SPRITE_SIZE, 2, (197, 157, 96, 255))
+    for pebble_column, pebble_row in ((7, 19), (21, 42), (37, 22), (52, 40)):
+        rect(pixels, pebble_column, pebble_row, 4, 2, (218, 181, 112, 255))
+        rect(pixels, pebble_column + 1, pebble_row + 5, 3, 2, (121, 92, 59, 255))
+    draw_tile_border(pixels, (196, 154, 95, 255), (94, 73, 52, 255))
     return pixels
 
 
 def tile_cover() -> Canvas:
     """Create a wooded cover tile."""
-    pixels = create_canvas(SPRITE_SIZE, SPRITE_SIZE, (42, 91, 76, 255))
-    rect(pixels, 0, 45, SPRITE_SIZE, 19, (30, 63, 55, 255))
+    pixels = create_canvas(SPRITE_SIZE, SPRITE_SIZE, (40, 86, 72, 255))
+    rect(pixels, 0, 46, SPRITE_SIZE, 18, (27, 58, 52, 255))
     for trunk_column, crown_column, crown_row, crown_color in (
         (13, 7, 14, (91, 158, 103, 255)),
         (30, 24, 8, (112, 182, 112, 255)),
@@ -179,11 +181,11 @@ def tile_cover() -> Canvas:
     ):
         rect(pixels, trunk_column, 34, 7, 22, (84, 55, 38, 255))
         rect(pixels, trunk_column + 2, 34, 3, 22, (129, 84, 52, 255))
-        ellipse(pixels, crown_column + 8, crown_row + 10, 13, 11, crown_color)
-        ellipse(pixels, crown_column + 15, crown_row + 17, 13, 12, (48, 101, 76, 255))
-        rect(pixels, crown_column + 4, crown_row + 8, 18, 3, (139, 205, 121, 255))
-    rect(pixels, 4, 53, 53, 5, (20, 43, 40, 255))
-    draw_tile_border(pixels, (76, 142, 97, 255), (22, 48, 44, 255))
+        ellipse(pixels, crown_column + 8, crown_row + 10, 12, 10, crown_color)
+        ellipse(pixels, crown_column + 15, crown_row + 17, 12, 11, (44, 96, 74, 255))
+        rect(pixels, crown_column + 5, crown_row + 8, 15, 3, (130, 192, 113, 255))
+    rect(pixels, 5, 53, 51, 5, (17, 39, 37, 255))
+    draw_tile_border(pixels, (66, 127, 89, 255), (19, 43, 40, 255))
     return pixels
 
 
@@ -207,7 +209,7 @@ def tile_hq() -> Canvas:
 
 def tile_ridge() -> Canvas:
     """Create a rocky ridge tile."""
-    pixels = create_canvas(SPRITE_SIZE, SPRITE_SIZE, (32, 41, 56, 255))
+    pixels = create_canvas(SPRITE_SIZE, SPRITE_SIZE, (27, 35, 49, 255))
     polygon(pixels, [(3, 52), (15, 33), (27, 48), (39, 23), (59, 54)], (17, 25, 38, 255))
     polygon(pixels, [(8, 47), (18, 24), (31, 48)], (58, 71, 91, 255))
     polygon(pixels, [(22, 49), (39, 14), (55, 50)], (75, 88, 111, 255))
@@ -215,8 +217,8 @@ def tile_ridge() -> Canvas:
     rect(pixels, 35, 17, 10, 3, (142, 154, 172, 255))
     rect(pixels, 15, 28, 8, 3, (111, 125, 145, 255))
     rect(pixels, 46, 34, 6, 3, (101, 114, 137, 255))
-    dither(pixels, (45, 57, 76, 255), (25, 32, 46, 255), 7)
-    draw_tile_border(pixels, (67, 80, 101, 255), (15, 22, 34, 255))
+    dither(pixels, (43, 54, 72, 255), (22, 29, 42, 255), 14)
+    draw_tile_border(pixels, (59, 71, 92, 255), (13, 20, 31, 255))
     return pixels
 
 

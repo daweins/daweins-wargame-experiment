@@ -35,6 +35,10 @@ The Godot prototype now renders a framed board with PNG terrain and unit sprite
 sheets, polished unit bases and HP bars, clearer highlights, a stronger cursor,
 and a more finished HUD. The current sheets are 64x64 generated assets with
 richer SNES and DS-style shading, outlines, texture, and unit silhouettes.
+Follow-up readability feedback drove a calmer road tile, quieter terrain
+texture, softer grid lines, unit backing plates, and a wrapped side-panel
+legend. The user inspected the result in the running prototype and said it is
+looking much better.
 
 ### First prototype definition
 

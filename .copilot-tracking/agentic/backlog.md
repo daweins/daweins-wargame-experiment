@@ -19,6 +19,16 @@ No ready items are currently queued ahead of another manual playtest pass.
 
 ## Done
 
+### G019: Board readability and road cleanup
+
+Completed: 2026-05-02
+
+Evidence: The terrain generator now emits a calmer road tile without diagonal
+stripe repetition, quieter grass and ridge texture, and regenerated PNG terrain
+sheets. `BattleController.cs` softens the board grid, adds a subtle backing
+plate behind units, and wraps the side-panel unit-shape legend. Smoke tests,
+Godot build, Godot startup, generator syntax check, and diagnostics pass.
+
 ### G018: SNES and DS style sprite upgrade
 
 Completed: 2026-05-02

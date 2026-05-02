@@ -19,8 +19,8 @@ Latest update: 2026-05-02
 ## Current Focus
 
 The current focus is improving the accepted first mission presentation. The
-latest manual request asked to move the art up from an 8-bit read toward SNES
-or Game Boy DS-style pixel art.
+latest manual request found the running board hard to read and called out the
+road tiles as a visual problem.
 
 ## Time In Progress
 
@@ -87,6 +87,13 @@ assets with stronger silhouettes, outlines, texture, shading, and palette depth.
 The renderer now uses 64x64 source regions, and the user reviewed the result as
 much better.
 
+The latest readability pass keeps the same mission and rules while calming the
+terrain presentation. The road tile now renders as a full-tile dirt lane instead
+of a repeated diagonal strip, plains and ridges use quieter texture, the board
+grid is less dominant, units have a subtle backing plate, and the side-panel
+unit-shape legend wraps instead of clipping. The user inspected the running
+prototype and said this pass is looking much better.
+
 .NET 8 SDK/runtime is installed because Godot 4.6 C# requires the .NET 8
 runtime for script loading. Godot Engine .NET 4.6.2 is installed and verified.
 Existing terminal sessions may need to be restarted before the `godot` and
@@ -139,8 +146,8 @@ repo secret scan.
   succeeds.
 * `python -m py_compile .\scripts\assets\generate_prototype_sprites.py`
   succeeds.
-* VS Code diagnostics report no errors for `BattleController.cs` after the
-  sprite-sheet migration.
+* VS Code diagnostics report no errors for `BattleController.cs` and
+  `generate_prototype_sprites.py` after the readability pass.
 * Markdown diagnostics are clean.
 * The repo secret scan passes.
 

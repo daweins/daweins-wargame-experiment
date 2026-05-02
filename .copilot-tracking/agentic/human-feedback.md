@@ -17,6 +17,22 @@ Status values: `new`, `considered`, `adopted`, `rejected`, `deferred`.
 
 ## Feedback
 
+### H016: Board readability and road cleanup
+
+Date: 2026-05-02
+
+Status: `adopted`
+
+Guidance: The running board is hard to read, and the road tiles look especially
+bad in the first mission view.
+
+Disposition: Simplified the generated terrain sheets by replacing the diagonal
+road strip with a calmer full-tile dirt road, reducing plain and ridge texture
+noise, and adding a subtle unit backing plate in the Godot renderer so units
+separate more clearly from the terrain. Also wrapped the unit-shape legend text
+that clipped in the side panel. Follow-up feedback says the result is looking
+much better.
+
 ### H015: SNES and DS visual generation
 
 Date: 2026-05-02
