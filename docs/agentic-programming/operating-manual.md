@@ -64,17 +64,20 @@ Use `guidance=...` to add a nudge without turning it into an approval gate.
 ## Read Status Reports
 
 The Development Status Reporter refreshes
-`.copilot-tracking/agentic/status/current-status.md` at the end of autonomous
-passes, after meaningful tracking changes, before long pauses, and when you run:
+`.copilot-tracking/agentic/status/current-status.md` at least every 30 minutes
+while active changes are underway, at the end of autonomous passes, after
+meaningful tracking changes, before long pauses, and when you run:
 
 ```text
 /development-status-report period=current
 ```
 
-Reports summarize the current state, what the project is working on, how long
-the effort has been underway, how the loop is working, what has worked well,
-where challenges have appeared, open human-intervention items, and next useful
-autonomous work.
+Reports include a full timestamp, keep old reports in
+`.copilot-tracking/agentic/status/reports/`, and may link public-safe
+screenshots or other image evidence. They summarize the current state, what the
+project is working on, how long the effort has been underway, how the loop is
+working, what has worked well, where challenges have appeared, open
+human-intervention items, and next useful autonomous work.
 
 ## Work Human Intervention Items
 

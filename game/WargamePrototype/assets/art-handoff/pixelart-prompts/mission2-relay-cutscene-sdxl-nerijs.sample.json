@@ -1,0 +1,21 @@
+{
+  "name": "mission2-relay-cutscene-sdxl-nerijs",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.75,
+  "loraStrengthClip": 0.75,
+  "prompt": "16-bit pixel art cinematic background, widescreen tactical RPG cutscene frame, damaged relay yard in a dusty basin at sunrise, two failing communication masts, orange warning lights, fuel cache crates, low concrete service buildings, armored vehicle tracks in dust, Kestrel blue-gray utility equipment, Orison orange hazard accents in the distance, grounded industrial sci-fi, no foreground characters, no text, no UI, no logos, readable composition for 1280x800 game cutscene",
+  "negativePrompt": "photorealistic, 3d render, painterly oil painting, anime character closeup, text, caption, logo, watermark, UI frame, border, speech bubble, fantasy castle, magic, alien temple, modern city skyline, cluttered foreground, blurry, low contrast, overexposed, distorted towers",
+  "width": 1024,
+  "height": 576,
+  "steps": 24,
+  "cfg": 6.5,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 48100,
+  "candidateCount": 2,
+  "batchSize": 1,
+  "timeoutMinutes": 30,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/mission2-relay-cutscene-sdxl-nerijs"
+}

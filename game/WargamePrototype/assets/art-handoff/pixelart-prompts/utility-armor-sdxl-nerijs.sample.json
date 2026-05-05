@@ -1,0 +1,21 @@
+{
+  "name": "utility-armor-sdxl-nerijs",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.8,
+  "loraStrengthClip": 0.8,
+  "prompt": "single centered game sprite of one compact futuristic armored rover, pixel art, isolated object on plain white background, no frame, no border, no text, three-quarter top-down tactical view, chunky 16-bit console pixels, hard dark outline, simple readable silhouette for 64x64, blue-gray armor plates, cyan windshield slit, tan equipment panels, broad wedge front, short low turret, one object only",
+  "negativePrompt": "sprite sheet, multiple views, multiple objects, UI card, user interface, item box, menu, label, caption, text, numbers, border, grid, blueprint, icon frame, room interior, scene, landscape, road, grass, building, person, soldier, robot, mech, spaceship, abstract pattern, photorealistic, 3d render, realistic lighting, painterly, blurry, cropped, excessive detail",
+  "width": 768,
+  "height": 768,
+  "steps": 24,
+  "cfg": 6.0,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 47000,
+  "candidateCount": 2,
+  "batchSize": 1,
+  "timeoutMinutes": 30,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/utility-armor-sdxl-nerijs"
+}

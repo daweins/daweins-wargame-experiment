@@ -1,0 +1,21 @@
+{
+  "name": "request08-unit-atlas-sdxl-nerijs-v1",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.62,
+  "loraStrengthClip": 0.62,
+  "prompt": "extractor-friendly runtime unit sprite atlas concept sheet for a 2D turn-based tactical combat game, genuine generated painted pixel art, not programmatic primitive art, crisp 16-bit tactical pixel art, orthographic three-quarter top-down camera, every unit facing lower-right, flat pure white background for extraction, no floor, no shadows, no labels, no grid, two horizontal rows of nine separated unit sprites, 18 units total, equal spacing, consistent scale, readable silhouettes at 64x64, thick clean dark outlines, limited palette, chunky pixel clusters, purposeful silhouette anchors, row 1 Kestrel blue-gray units with cyan accents: field tech infantry squad, utility armor line vehicle, survey scout buggy, expedition engineer support unit, field sapper demolition infantry, AT lancer anti-armor infantry, trail striker fast light vehicle, field rig repair and supply vehicle, siege breaker heavy prototype vehicle, row 2 Orison orange-red corporate units with matching roles: raider trooper infantry squad, line armor vehicle, pursuit scout buggy, sabotage engineer support unit, breach sapper demolition infantry, breach lancer anti-armor infantry, hunter bike fast light vehicle, ammo mule support vehicle, siege breaker heavy prototype vehicle",
+  "negativePrompt": "C# primitive placeholder art, simple rectangle construction, simple ellipse construction, flat vector icon look, generic symbols, text, letters, numbers, labels, captions, watermark, logo, visible grid, UI card, menu frame, border, reference sheet labels, character portrait, anime closeup, photorealistic, 3d render, painterly lighting, dramatic perspective, side view, front portrait view, floor shadow, cast shadow, smoke, glow bloom, rim glow, tiny limbs, thin antennae, loose cables, cropped unit, cropped feet, overlapping units, duplicate view sheet, extra rows, extra columns, inconsistent scale, blurry, low contrast, noisy dithering, environment, landscape, buildings, terrain, white outline halo",
+  "width": 1344,
+  "height": 768,
+  "steps": 26,
+  "cfg": 5.4,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 58000,
+  "candidateCount": 4,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/request08-unit-atlas-sdxl-nerijs-v1"
+}

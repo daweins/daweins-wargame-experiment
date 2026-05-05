@@ -1,0 +1,21 @@
+{
+  "name": "vehicle-roster-sdxl-nerijs-v4",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.62,
+  "loraStrengthClip": 0.62,
+  "prompt": "clean concept sheet of eight separate compact tactical vehicle sprites for a 16-bit turn-based tactics game, flat pure white background, no floor, no shadow, orthographic three-quarter top-down camera, every vehicle facing lower-right, same scale, chunky pixel art, thick black outline, simple readable silhouettes, Kestrel blue-gray vehicles with teal sensor slits and tan panels: utility armor wedge rover, survey scout low buggy crawler, field rig logistics truck with crates, damaged survey crawler objective vehicle; Orison charcoal-gray vehicles with orange hazard accents: line armor rover, pursuit scout sharp buggy, hunter bike low fast profile, siege breaker wide heavy vehicle, large empty white spacing between vehicles, no labels, readable when cropped to 64x64",
+  "negativePrompt": "text, letters, numbers, labels, watermark, logo, UI card, border, visible grid, gray background, floor, floor plane, cast shadow, drop shadow, road, terrain, landscape, buildings, humanoid soldiers, character portrait, side view, front view, dramatic perspective, photorealistic, 3d render, painterly, smooth blur, tiny thin parts, antenna forest, loose cables, smoke, bloom, glow, cropped vehicle, overlapping vehicles, inconsistent scale, extra vehicles",
+  "width": 1152,
+  "height": 768,
+  "steps": 24,
+  "cfg": 5.2,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 53000,
+  "candidateCount": 1,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/vehicle-roster-sdxl-nerijs-v4"
+}

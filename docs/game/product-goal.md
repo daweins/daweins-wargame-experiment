@@ -8,10 +8,10 @@ ms.topic: concept
 
 ## Product Thesis
 
-Build a near-future sci-fi tactical combat game for laptop and Steam Deck that
-captures the army-command clarity of Advance Wars while adding grounded humor,
-CO identity, light logistics, 16-bit-era pixel art, and deterministic
-replayability.
+Build a realistic near-future sci-fi tactical combat game for laptop and Steam
+Deck that captures the army-command clarity of Advance Wars while adding
+grounded political conflict, dry humor, CO identity, light logistics,
+16-bit-era pixel art, and deterministic replayability.
 
 The player should feel like a clever field commander making readable tactical
 choices under pressure. Battles should mostly reward planning and positioning,
@@ -56,6 +56,24 @@ Commanding officers are a main source of faction identity. They should shape
 tactics through charge rules, powers, and strategic preferences without
 overwhelming the unit-counter foundation. HQs are static and mission-critical,
 with HQ capture creating immediate win or loss conditions.
+
+### Grounded Political Sci-Fi
+
+The campaign should prioritize believable incentives: resource concessions,
+industrial liability, public-safety authority, civilian infrastructure,
+strategic parity, regulatory capture, and frontier governance. Rare materials
+and automated systems must have supply-chain limits, legal stakeholders,
+failure modes, and visible map objectives. Avoid mystical macguffins, ancient
+destiny, sentient infrastructure, or technology that solves logistics by
+assertion.
+
+Interstellar travel should reinforce those politics. The setting uses scheduled
+beam corridors, fusion pushers, magsail braking, depots, manifests, and courier
+relays rather than instant FTL travel. FTL messaging exists through fixed,
+low-bandwidth, audited Spindle Net stations, so orders and sanctions can outrun
+ships while people, parts, fuel, and armies remain constrained by transit
+logistics. Freight slots, braking rights, message priority, relay
+authentication, insurance, and transit sanctions are political weapons.
 
 ### Grounded Humor
 

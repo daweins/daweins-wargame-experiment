@@ -1,0 +1,160 @@
+{
+  "format_version": "1.0",
+  "cutscene_id": "mission1_intro",
+  "style_profile": "snes_gbds_hybrid_v1",
+  "resolution": {
+    "width": 320,
+    "height": 180
+  },
+  "sheet": {
+    "columns": 3
+  },
+  "palette": {
+    "sky_night_dark": [12, 20, 45, 255],
+    "sky_night_mid": [30, 46, 86, 255],
+    "sky_night_light": [58, 84, 132, 255],
+    "dust_haze": [91, 112, 140, 255],
+    "ground_dark": [34, 40, 48, 255],
+    "ground_mid": [55, 63, 73, 255],
+    "ridge_dark": [26, 33, 45, 255],
+    "ridge_mid": [49, 63, 84, 255],
+    "ridge_light": [86, 105, 132, 255],
+    "camp_metal_dark": [50, 64, 76, 255],
+    "camp_metal_mid": [80, 98, 116, 255],
+    "camp_metal_light": [129, 153, 174, 255],
+    "floodlight": [239, 228, 154, 255],
+    "warning_red": [214, 78, 76, 255],
+    "ui_blue": [90, 160, 214, 255],
+    "ui_cyan": [110, 220, 226, 255],
+    "orison_dark": [84, 36, 35, 255],
+    "orison_mid": [140, 58, 53, 255],
+    "orison_light": [196, 104, 89, 255],
+    "kestrel_dark": [25, 76, 134, 255],
+    "kestrel_mid": [73, 140, 204, 255],
+    "kestrel_light": [165, 218, 248, 255],
+    "glass": [162, 203, 227, 255],
+    "shadow": [10, 14, 20, 180]
+  },
+  "frames": [
+    {
+      "id": "01_camp_establishing",
+      "duration_ms": 1200,
+      "background": "sky_night_dark",
+      "layers": [
+        { "op": "rect", "x": 0, "y": 0, "width": 320, "height": 70, "color": "sky_night_dark" },
+        { "op": "rect", "x": 0, "y": 70, "width": 320, "height": 34, "color": "sky_night_mid" },
+        { "op": "rect", "x": 0, "y": 104, "width": 320, "height": 76, "color": "ground_dark" },
+        { "op": "polygon", "points": [[0, 112], [38, 82], [74, 104], [116, 74], [174, 112]], "color": "ridge_dark" },
+        { "op": "polygon", "points": [[112, 112], [162, 70], [220, 102], [282, 64], [320, 112]], "color": "ridge_mid" },
+        { "op": "rect", "x": 22, "y": 112, "width": 84, "height": 36, "color": "camp_metal_mid" },
+        { "op": "rect", "x": 32, "y": 96, "width": 20, "height": 16, "color": "camp_metal_light" },
+        { "op": "rect", "x": 62, "y": 92, "width": 14, "height": 20, "color": "camp_metal_light" },
+        { "op": "rect", "x": 150, "y": 118, "width": 62, "height": 28, "color": "camp_metal_mid" },
+        { "op": "rect", "x": 166, "y": 104, "width": 12, "height": 14, "color": "camp_metal_light" },
+        { "op": "rect", "x": 260, "y": 94, "width": 4, "height": 52, "color": "camp_metal_light" },
+        { "op": "ellipse", "x": 262, "y": 92, "radius_x": 8, "radius_y": 4, "color": "floodlight" },
+        { "op": "rect", "x": 0, "y": 150, "width": 320, "height": 30, "color": "ground_mid" },
+        { "op": "dither", "x": 0, "y": 110, "width": 320, "height": 70, "color_a": "dust_haze", "color_b": "ground_dark", "step": 11 }
+      ]
+    },
+    {
+      "id": "02_scout_alert_map",
+      "duration_ms": 1100,
+      "background": "sky_night_dark",
+      "layers": [
+        { "op": "rect", "x": 0, "y": 0, "width": 320, "height": 180, "color": "ground_dark" },
+        { "op": "rect", "x": 18, "y": 16, "width": 284, "height": 148, "color": "camp_metal_dark" },
+        { "op": "rect", "x": 24, "y": 22, "width": 272, "height": 136, "color": "ui_blue" },
+        { "op": "dither", "x": 24, "y": 22, "width": 272, "height": 136, "color_a": "ui_cyan", "color_b": "ui_blue", "step": 10 },
+        { "op": "polygon", "points": [[52, 118], [90, 88], [132, 102], [170, 72], [220, 112], [244, 124], [52, 124]], "color": "ridge_mid" },
+        { "op": "rect", "x": 86, "y": 68, "width": 4, "height": 30, "color": "ui_cyan" },
+        { "op": "rect", "x": 86, "y": 68, "width": 48, "height": 3, "color": "ui_cyan" },
+        { "op": "ellipse", "x": 168, "y": 78, "radius_x": 7, "radius_y": 7, "color": "warning_red" },
+        { "op": "ellipse", "x": 234, "y": 96, "radius_x": 5, "radius_y": 5, "color": "warning_red" },
+        { "op": "rect", "x": 34, "y": 132, "width": 96, "height": 14, "color": "camp_metal_mid" },
+        { "op": "rect", "x": 142, "y": 132, "width": 74, "height": 14, "color": "camp_metal_mid" },
+        { "op": "rect", "x": 226, "y": 132, "width": 58, "height": 14, "color": "camp_metal_mid" }
+      ]
+    },
+    {
+      "id": "03_relay_dropout_ridge",
+      "duration_ms": 1300,
+      "background": "sky_night_dark",
+      "layers": [
+        { "op": "rect", "x": 0, "y": 0, "width": 320, "height": 82, "color": "sky_night_mid" },
+        { "op": "rect", "x": 0, "y": 82, "width": 320, "height": 98, "color": "ground_dark" },
+        { "op": "polygon", "points": [[0, 130], [68, 98], [128, 106], [182, 84], [248, 110], [320, 100], [320, 180], [0, 180]], "color": "ridge_dark" },
+        { "op": "polygon", "points": [[26, 142], [94, 112], [146, 120], [194, 92], [252, 122], [320, 114], [320, 180], [26, 180]], "color": "ridge_mid" },
+        { "op": "rect", "x": 152, "y": 50, "width": 6, "height": 84, "color": "camp_metal_light" },
+        { "op": "rect", "x": 142, "y": 44, "width": 26, "height": 8, "color": "camp_metal_light" },
+        { "op": "rect", "x": 149, "y": 38, "width": 12, "height": 6, "color": "warning_red" },
+        { "op": "ellipse", "x": 155, "y": 36, "radius_x": 24, "radius_y": 12, "color": "shadow" },
+        { "op": "dither", "x": 0, "y": 80, "width": 320, "height": 100, "color_a": "dust_haze", "color_b": "ground_dark", "step": 12 }
+      ]
+    },
+    {
+      "id": "04_orison_column_approach",
+      "duration_ms": 1200,
+      "background": "sky_night_dark",
+      "layers": [
+        { "op": "rect", "x": 0, "y": 0, "width": 320, "height": 88, "color": "sky_night_light" },
+        { "op": "rect", "x": 0, "y": 88, "width": 320, "height": 92, "color": "ground_mid" },
+        { "op": "polygon", "points": [[0, 108], [46, 92], [92, 102], [132, 84], [178, 106], [224, 90], [274, 102], [320, 94], [320, 140], [0, 140]], "color": "ridge_mid" },
+        { "op": "rect", "x": 0, "y": 132, "width": 320, "height": 48, "color": "ground_dark" },
+        { "op": "rect", "x": 24, "y": 136, "width": 40, "height": 16, "color": "orison_dark" },
+        { "op": "rect", "x": 30, "y": 130, "width": 18, "height": 8, "color": "orison_mid" },
+        { "op": "rect", "x": 68, "y": 139, "width": 34, "height": 14, "color": "orison_dark" },
+        { "op": "rect", "x": 72, "y": 133, "width": 14, "height": 6, "color": "orison_mid" },
+        { "op": "rect", "x": 108, "y": 142, "width": 30, "height": 12, "color": "orison_dark" },
+        { "op": "rect", "x": 112, "y": 136, "width": 14, "height": 6, "color": "orison_mid" },
+        { "op": "rect", "x": 142, "y": 145, "width": 24, "height": 10, "color": "orison_dark" },
+        { "op": "rect", "x": 166, "y": 124, "width": 76, "height": 4, "color": "dust_haze" },
+        { "op": "dither", "x": 0, "y": 120, "width": 320, "height": 60, "color_a": "dust_haze", "color_b": "ground_dark", "step": 9 }
+      ]
+    },
+    {
+      "id": "05_hq_scramble",
+      "duration_ms": 1250,
+      "background": "sky_night_dark",
+      "layers": [
+        { "op": "rect", "x": 0, "y": 0, "width": 320, "height": 78, "color": "sky_night_mid" },
+        { "op": "rect", "x": 0, "y": 78, "width": 320, "height": 102, "color": "ground_dark" },
+        { "op": "rect", "x": 28, "y": 102, "width": 112, "height": 46, "color": "camp_metal_mid" },
+        { "op": "rect", "x": 40, "y": 88, "width": 20, "height": 14, "color": "camp_metal_light" },
+        { "op": "rect", "x": 66, "y": 92, "width": 16, "height": 10, "color": "camp_metal_light" },
+        { "op": "rect", "x": 92, "y": 84, "width": 18, "height": 18, "color": "camp_metal_light" },
+        { "op": "rect", "x": 152, "y": 108, "width": 78, "height": 38, "color": "kestrel_dark" },
+        { "op": "rect", "x": 162, "y": 96, "width": 18, "height": 12, "color": "kestrel_mid" },
+        { "op": "rect", "x": 186, "y": 96, "width": 14, "height": 12, "color": "kestrel_mid" },
+        { "op": "rect", "x": 210, "y": 92, "width": 12, "height": 16, "color": "kestrel_mid" },
+        { "op": "ellipse", "x": 54, "y": 84, "radius_x": 10, "radius_y": 4, "color": "warning_red" },
+        { "op": "ellipse", "x": 232, "y": 86, "radius_x": 10, "radius_y": 4, "color": "warning_red" },
+        { "op": "rect", "x": 0, "y": 148, "width": 320, "height": 32, "color": "ground_mid" },
+        { "op": "dither", "x": 0, "y": 90, "width": 320, "height": 90, "color_a": "dust_haze", "color_b": "ground_dark", "step": 10 }
+      ]
+    },
+    {
+      "id": "06_player_handoff",
+      "duration_ms": 1500,
+      "background": "sky_night_dark",
+      "layers": [
+        { "op": "rect", "x": 0, "y": 0, "width": 320, "height": 70, "color": "sky_night_mid" },
+        { "op": "rect", "x": 0, "y": 70, "width": 320, "height": 110, "color": "ground_dark" },
+        { "op": "polygon", "points": [[0, 108], [58, 84], [110, 96], [156, 74], [210, 100], [254, 90], [320, 110], [320, 180], [0, 180]], "color": "ridge_dark" },
+        { "op": "rect", "x": 86, "y": 108, "width": 58, "height": 28, "color": "kestrel_dark" },
+        { "op": "rect", "x": 98, "y": 98, "width": 12, "height": 10, "color": "kestrel_mid" },
+        { "op": "rect", "x": 114, "y": 98, "width": 10, "height": 10, "color": "kestrel_mid" },
+        { "op": "rect", "x": 130, "y": 94, "width": 8, "height": 14, "color": "kestrel_mid" },
+        { "op": "rect", "x": 174, "y": 114, "width": 46, "height": 20, "color": "orison_dark" },
+        { "op": "rect", "x": 182, "y": 106, "width": 14, "height": 8, "color": "orison_mid" },
+        { "op": "rect", "x": 226, "y": 116, "width": 36, "height": 18, "color": "orison_dark" },
+        { "op": "rect", "x": 232, "y": 108, "width": 12, "height": 8, "color": "orison_mid" },
+        { "op": "rect", "x": 20, "y": 148, "width": 280, "height": 24, "color": "camp_metal_dark" },
+        { "op": "rect", "x": 24, "y": 152, "width": 100, "height": 6, "color": "warning_red" },
+        { "op": "rect", "x": 128, "y": 152, "width": 86, "height": 6, "color": "ui_blue" },
+        { "op": "rect", "x": 218, "y": 152, "width": 78, "height": 6, "color": "floodlight" },
+        { "op": "dither", "x": 0, "y": 82, "width": 320, "height": 98, "color_a": "dust_haze", "color_b": "ground_dark", "step": 11 }
+      ]
+    }
+  ]
+}

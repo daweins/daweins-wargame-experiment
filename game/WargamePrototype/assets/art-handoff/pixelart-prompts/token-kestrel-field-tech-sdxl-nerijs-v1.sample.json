@@ -1,0 +1,21 @@
+{
+  "name": "token-kestrel-field-tech-sdxl-nerijs-v1",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.7,
+  "loraStrengthClip": 0.7,
+  "prompt": "one complete small tactical board unit sprite for a 16-bit turn-based strategy game, Kestrel field tech infantry, short squat chibi proportions, oversized round helmet with teal visor, compact blue-gray armor vest, tan survey pack, tiny boots, thick black outline, simple readable silhouette, orthographic three-quarter top-down camera, facing lower-right, centered full body, arms close to body, no duplicate poses, no sprite sheet, no labels, flat pure magenta background, no floor, no shadow, designed to remain readable when downscaled to 64x64",
+  "negativePrompt": "multiple characters, front and back view, sheet, turnaround, labels, text, letters, numbers, watermark, UI card, border, white background, gray background, floor, terrain, road, building, portrait, closeup, tall realistic human, long legs, thin limbs, detailed face, anime portrait, photorealistic, 3d render, painterly, blur, glow, smoke, cast shadow, cropped feet, extra arms, extra legs, weapon longer than body",
+  "width": 768,
+  "height": 768,
+  "steps": 26,
+  "cfg": 5.6,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 57000,
+  "candidateCount": 2,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/token-kestrel-field-tech-sdxl-nerijs-v1"
+}

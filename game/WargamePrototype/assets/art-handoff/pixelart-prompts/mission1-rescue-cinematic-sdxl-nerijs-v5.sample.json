@@ -1,0 +1,21 @@
+{
+  "name": "mission1-rescue-cinematic-sdxl-nerijs-v5",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.6,
+  "loraStrengthClip": 0.6,
+  "prompt": "widescreen 16-bit pixel art cinematic illustration, eye-level camera, visible horizon, not top-down, not isometric, a small damaged survey buggy crawler stopped in the midground beside a red-and-white restricted seam marker, two tiny rescue figures near the crawler for scale, dusty basin road, sample crates on the ground, faint teal Asterite flecks in cracked rocks, distant camp floodlights beyond basalt ridges, blue-gray Kestrel panels and cyan sensor slit on the small crawler, grounded near-future industrial sci-fi, tense quiet rescue aftermath, open lower-left foreground reserved for dialogue panel, no text, no UI, no logo",
+  "negativePrompt": "giant tank, massive armored vehicle, close-up vehicle filling frame, top-down view, overhead map, isometric map, tilemap, asset sheet, sprite sheet, separate props, inventory icons, orthographic object sheet, labels, text, letters, numbers, logo, watermark, UI frame, speech bubble, photorealistic, 3d render, painterly oil painting, anime closeup, fantasy, magic, alien ruins, modern city skyline, cluttered lower-left foreground, blurry, low contrast, overexposed, distorted crawler, noisy tiny details",
+  "width": 1024,
+  "height": 576,
+  "steps": 28,
+  "cfg": 6.4,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 56100,
+  "candidateCount": 1,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/mission1-rescue-cinematic-sdxl-nerijs-v5"
+}

@@ -1,0 +1,21 @@
+{
+  "name": "token-kestrel-field-tech-sdxl-nerijs-v4",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.7,
+  "loraStrengthClip": 0.7,
+  "prompt": "small full-body infantry board token, one complete Kestrel field tech support soldier only, viewed from slightly above, body angled lower-right, helmet top visible, face simplified to one teal visor slit only, no facial features, compact tan and blue-gray field gear, backpack visible, boots visible, arms visible, one small repair scanner held close to torso, thick dark outline, simple readable silhouette, limited 16-bit pixel palette, centered on pure flat magenta background, no floor, no room, no shadow, no card, no border, must remain readable as one infantry unit at 64x64 over busy tactical terrain",
+  "negativePrompt": "front portrait, visible face, large head closeup, bust, room wall, floor stripes, presentation background, floor plane, cast shadow, multiple characters, squad, sprite sheet, turnaround sheet, duplicate poses, labels, text, letters, numbers, watermark, UI card, border, frame, white background, gray background, scenic background, terrain, road, building, interior room, facility, tilemap, floor plan, equipment layout, modular panels, console, source-card composition, crate, vehicle, robot, side view, tall realistic human, long legs, thin limbs, tiny weapon lines, detailed face, anime closeup, photorealistic, 3d render, painterly, soft blur, bloom, glow, smoke, cropped feet, extra arms, extra legs",
+  "width": 640,
+  "height": 640,
+  "steps": 28,
+  "cfg": 5.6,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 57700,
+  "candidateCount": 4,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/token-kestrel-field-tech-sdxl-nerijs-v4"
+}

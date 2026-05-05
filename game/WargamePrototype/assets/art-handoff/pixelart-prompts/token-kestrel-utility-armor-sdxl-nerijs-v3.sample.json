@@ -1,0 +1,21 @@
+{
+  "name": "token-kestrel-utility-armor-sdxl-nerijs-v3",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.68,
+  "loraStrengthClip": 0.68,
+  "prompt": "one complete compact Kestrel utility armor rover token only, no detached parts, no alternate views, no source sheet, three-quarter top-down from above, facing lower-right, broad wedge chassis, four thick wheels visible inside crop, chunky readable silhouette, teal front sensor slit, tan repair panels, blue-gray armor body, one warm yellow service stripe, thick dark outline, centered on pure flat magenta background, limited 16-bit tactical pixel art, fills most of square crop, must read as a durable armored utility unit at 64x64 over busy terrain",
+  "negativePrompt": "vehicle sheet, parts diagram, side elevation, front elevation, multiple views, exploded view, white background, gray background, road, terrain, floor, room, garage, hangar, scenic background, card, border, frame, text, labels, numbers, watermark, duplicate vehicle, tiny vehicle, cropped wheels, detached wheels, crate, cargo box, building, tank cannon, long gun barrel, photorealistic, 3d render, painterly, soft blur, bloom, glow, smoke, cast shadow, noisy brown ground",
+  "width": 640,
+  "height": 640,
+  "steps": 28,
+  "cfg": 5.5,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 57800,
+  "candidateCount": 4,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/token-kestrel-utility-armor-sdxl-nerijs-v3"
+}

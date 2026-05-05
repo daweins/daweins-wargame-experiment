@@ -1,0 +1,18 @@
+{
+  "name": "request11-natural-basin-ground-material-sdxl-v2",
+  "model": "sd_xl_base_1.0.safetensors",
+  "prompt": "top-down orthographic natural dry basin battlefield ground material, random ochre dirt and dusty sand, small scattered stones, tiny scrub flecks, natural irregular surface, no organized pattern, no seams, no rectangles, no tile joints, no planks, no bricks, no floor, no road, no river, no buildings, no perspective, fills the whole square with natural terrain material, game art reference texture",
+  "negativePrompt": "brick, bricks, plank, planks, wood floor, floor tiles, stone tiles, paving slabs, patio, wall, masonry, grid, seams, repeated rectangles, square cells, panel lines, road, highway, lane, river, canal, water, building, room, roof, interior, floor plan, city map, architecture plan, character, vehicle, text, labels, numbers, frame, border, card, horizon, perspective, isometric, photorealistic macro photo, high contrast clutter",
+  "width": 768,
+  "height": 768,
+  "steps": 28,
+  "cfg": 4.2,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 61520,
+  "candidateCount": 4,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/request11-natural-basin-ground-material-sdxl-v2"
+}

@@ -1,0 +1,21 @@
+{
+  "name": "request08-kestrel-field-tech-sdxl-nerijs-v2",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.56,
+  "loraStrengthClip": 0.56,
+  "prompt": "one complete Kestrel Field Tech infantry board token only, squat chibi tactical soldier silhouette, crisp 16-bit pixel art, orthographic three-quarter top-down camera facing lower-right, oversized blue-gray helmet, one bright teal visor slit, compact torso armor, tan backpack, two short visible boots, two short visible arms held close to body, tiny repair scanner attached to chest not held out, thick dark outline, simple large color blocks, centered full body with 12 percent padding, flat pure magenta extraction background, no floor, no shadow, no room, no card, no equipment sheet, readable as one infantry unit when cropped to 64x64 over busy terrain",
+  "negativePrompt": "multiple people, squad, duplicate poses, full character sheet, sprite sheet, roster sheet, turnaround, portrait, bust, close-up face, tall realistic person, long legs, thin limbs, tiny face details, detached tools, loose equipment, separate backpack object, room, floor, terrain, console, control panel, card, frame, border, labels, text, letters, numbers, watermark, white background, gray background, beige background, shadow, glow, smoke, photorealistic, 3d render, painterly blur, anime glamour, cropped feet, cropped arms, extra arms, extra legs",
+  "width": 768,
+  "height": 768,
+  "steps": 26,
+  "cfg": 4.8,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 58900,
+  "candidateCount": 4,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/request08-kestrel-field-tech-sdxl-nerijs-v2"
+}

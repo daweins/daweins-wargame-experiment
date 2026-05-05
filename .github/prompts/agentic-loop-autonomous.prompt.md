@@ -40,7 +40,8 @@ argument-hint: "[goal=active-goal] [guidance=...] [intensity=normal|deep]"
    `metrics.md`, and `human-intervention.md` as appropriate.
 9. Ask Development Status Reporter to refresh
    `.copilot-tracking/agentic/status/current-status.md` when reporting cadence
-   is due, especially after meaningful state changes and before ending the pass.
+   is due. During active changes, this is at least every 30 minutes, especially
+   after meaningful state changes and before ending the pass.
 10. Continue to the next useful safe item while invocation budget remains.
 11. Stop only when work is complete for the current budget, a security hard stop
    is reached, or no useful safe next action exists.

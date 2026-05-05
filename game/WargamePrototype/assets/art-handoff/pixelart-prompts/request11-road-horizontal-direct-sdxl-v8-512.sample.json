@@ -1,0 +1,18 @@
+{
+  "name": "request11-road-horizontal-direct-sdxl-v8-512",
+  "model": "sd_xl_base_1.0.safetensors",
+  "prompt": "one square overhead tactical terrain tile, dry ochre wasteland ground, exactly one straight horizontal dusty dirt road band through the center, road connects left edge center to right edge center, no vertical branch, no intersection, no crossroad, no border, no frame, no grid, no buildings, no water, subtle tire wear, small gravel shoulders, scattered pebbles and dry scrub outside the road, clean game board terrain art, readable at small size",
+  "negativePrompt": "crossroad, intersection, vertical road, branch, T junction, corner road, multiple roads, border, frame, wall, room, interior, floor, floor plan, architecture plan, city map, plaza, courtyard, roof, building, bunker, canal, river, lake, water, bridge, grid, seams, brick, planks, tile sheet, labels, text, numbers, card, UI, perspective, isometric, horizon, vehicle, character, satellite photo, photorealistic, macro photograph, road missing left edge, road missing right edge",
+  "width": 512,
+  "height": 512,
+  "steps": 24,
+  "cfg": 4.0,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 61720,
+  "candidateCount": 6,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/request11-road-horizontal-direct-sdxl-v8-512"
+}

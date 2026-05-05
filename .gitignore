@@ -39,6 +39,9 @@ export_presets.cfg
 *.zip
 *.tar
 *.tar.gz
+game/WargamePrototype/assets/art-handoff/local-candidates/
+game/WargamePrototype/assets/art-handoff/local-review/
+game/WargamePrototype/assets/art-handoff/**/*.tmp.json
 
 # OS noise
 .DS_Store

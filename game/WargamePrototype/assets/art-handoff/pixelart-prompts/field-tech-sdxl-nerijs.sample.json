@@ -1,0 +1,21 @@
+{
+  "name": "field-tech-sdxl-nerijs",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.8,
+  "loraStrengthClip": 0.8,
+  "prompt": "single centered game sprite of one near-future field technician infantry unit, pixel art, isolated full body on plain white background, no frame, no border, no text, three-quarter top-down tactical view, chunky 16-bit console pixels, hard dark outline, simple readable silhouette for 64x64, blue-gray expedition armor, cyan visor stripe, square repair backpack, small helmet, compact carbine held low, short sturdy proportions, one person only",
+  "negativePrompt": "sprite sheet, multiple poses, multiple people, squad, UI card, user interface, item box, menu, label, caption, text, numbers, border, grid, blueprint, icon frame, room interior, scene, landscape, road, grass, building, portrait, face closeup, fantasy armor, cape, giant weapon, robot, mech, photorealistic, 3d render, realistic lighting, painterly, blurry, cropped, excessive detail",
+  "width": 768,
+  "height": 768,
+  "steps": 24,
+  "cfg": 6.0,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 47100,
+  "candidateCount": 2,
+  "batchSize": 1,
+  "timeoutMinutes": 30,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/field-tech-sdxl-nerijs"
+}

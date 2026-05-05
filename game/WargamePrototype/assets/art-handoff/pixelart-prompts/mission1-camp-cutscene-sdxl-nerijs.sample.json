@@ -1,0 +1,21 @@
+{
+  "name": "mission1-camp-cutscene-sdxl-nerijs",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.75,
+  "loraStrengthClip": 0.75,
+  "prompt": "16-bit pixel art cinematic background, widescreen tactical RPG cutscene frame, Kestrel survey camp at pre-dawn in a dusty industrial sci-fi basin, floodlights, scaffold towers, sample rigs, patched survey crawler near barricades, cold blue-gray camp lights with tan dust, grounded near-future equipment, distant ridge silhouettes, no characters in foreground, no text, no UI, no logos, readable composition for 1280x800 game cutscene",
+  "negativePrompt": "photorealistic, 3d render, painterly oil painting, anime character closeup, text, caption, logo, watermark, UI frame, border, speech bubble, fantasy castle, magic, alien ruins, modern city skyline, cluttered foreground, blurry, low contrast, overexposed, distorted vehicles",
+  "width": 1024,
+  "height": 576,
+  "steps": 24,
+  "cfg": 6.5,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 48000,
+  "candidateCount": 2,
+  "batchSize": 1,
+  "timeoutMinutes": 30,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/mission1-camp-cutscene-sdxl-nerijs"
+}

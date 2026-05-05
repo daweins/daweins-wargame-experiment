@@ -1,0 +1,21 @@
+{
+  "name": "mission1-rescue-cutscene-sdxl-nerijs-v2",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.7,
+  "loraStrengthClip": 0.7,
+  "prompt": "16-bit pixel art widescreen tactical RPG cutscene background, consistent Kestrel Aster Basin visual style, Scout-7 stranded survey crawler near restricted seam marker after rescue, dusty basin road, small sample crates, teal Asterite flecks in rock cracks, damaged crawler with blue-gray Kestrel panels and cyan sensor slit, distant camp floodlights beyond basalt ridge, grounded near-future industrial sci-fi, wide establishing composition, clear midground crawler subject, uncluttered lower third for dialogue UI, no critical detail in bottom quarter, readable at 1280x800, no text, no logos, no UI",
+  "negativePrompt": "photorealistic, 3d render, painterly oil painting, anime closeup, text, caption, logo, watermark, UI frame, border, speech bubble, fantasy, magic, alien ruins, modern city skyline, cluttered lower third, foreground character closeup, blurry, low contrast, overexposed, distorted crawler, illegible machinery",
+  "width": 1024,
+  "height": 576,
+  "steps": 26,
+  "cfg": 6.2,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 51100,
+  "candidateCount": 3,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/mission1-rescue-cutscene-sdxl-nerijs-v2"
+}

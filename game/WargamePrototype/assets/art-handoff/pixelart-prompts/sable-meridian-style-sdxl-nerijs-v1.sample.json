@@ -1,0 +1,21 @@
+{
+  "name": "sable-meridian-style-sdxl-nerijs-v1",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.62,
+  "loraStrengthClip": 0.62,
+  "prompt": "transparent-background faction style exploration sheet for a 16-bit turn-based tactics game, two horizontal bands with separated board-scale concepts, top band Sable Accord disciplined recon infantry, compact sensor specialist with dish pack, light armored recon vehicle, artillery silhouette, sensor post and jammer mast; bottom band Free Meridian Compact patched raider infantry, scout bike or trail buggy, ambusher silhouette, civilian heat-tap technician token, drill rig, domestic Asterite heat tap, Marshal Calder command marker, orthographic three-quarter top-down concepts, full units and props visible, thick dark outlines, Sable cool slate and desaturated blue-gray sensor hardware, Meridian dusty red trails and warm amber practical hauler gear, readable at 64x64, no labels",
+  "negativePrompt": "text, labels, letters, numbers, captions, logo, watermark, UI cards, presentation borders, terrain background, floor plane, cast shadow, photorealistic, 3d render, painterly, anime portrait, closeup bust, multiple duplicate views, tiny thin limbs, crowded overlapping concepts, inconsistent scale, blurry, bloom",
+  "width": 1152,
+  "height": 768,
+  "steps": 24,
+  "cfg": 5.6,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 58500,
+  "candidateCount": 1,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/sable-meridian-style-sdxl-nerijs-v1"
+}

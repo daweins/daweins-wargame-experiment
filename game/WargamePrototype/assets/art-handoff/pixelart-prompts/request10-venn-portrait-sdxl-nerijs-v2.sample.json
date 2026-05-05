@@ -1,0 +1,21 @@
+{
+  "name": "request10-venn-portrait-sdxl-nerijs-v2",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.54,
+  "loraStrengthClip": 0.54,
+  "prompt": "single commander briefing portrait bust for Venn, Kestrel expedition commander, crisp 16-bit pixel art portrait, grounded near-future sci-fi, calm tired field leader, blue-gray uniform collar, subtle teal comms light, practical headset, cropped shoulders and head, three-quarter view, neutral dark briefing background, no full body, no character sheet, no labels, no text, no dramatic fantasy lighting, clean readable face silhouette, limited palette, compatible with tactical game dialogue UI",
+  "negativePrompt": "full body, multiple portraits, portrait sheet, turnaround, labels, text, watermark, UI card border, fantasy armor, photorealistic, 3d render, anime glamor, painterly blur, glowing everywhere, weapon pose, battlefield scene, helmet covering face, cropped head, extra people",
+  "width": 768,
+  "height": 768,
+  "steps": 28,
+  "cfg": 5.2,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 62000,
+  "candidateCount": 2,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/request10-venn-portrait-sdxl-nerijs-v2"
+}

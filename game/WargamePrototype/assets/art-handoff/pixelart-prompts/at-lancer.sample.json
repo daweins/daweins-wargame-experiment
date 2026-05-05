@@ -1,0 +1,18 @@
+{
+  "name": "at-lancer",
+  "model": "v1-5-pruned-emaonly.safetensors",
+  "prompt": "single isolated 16-bit tactical RPG anti-armor infantry sprite, Kestrel AT Lancer only, centered on plain transparent-looking flat background, three-quarter down-right view, readable 64x64 silhouette, blue-gray armored suit, cyan shoulder marker, long shoulder-fired anti-armor lance launcher angled diagonally, braced stance, small ammo pack, hard black outline, chunky pixel clusters, grounded near-future sci-fi, no environment, no squadmates, no buildings, no terrain, game asset candidate",
+  "negativePrompt": "tilemap, tactical map, scene, landscape, grass field, grid, road, building, house, multiple people, crowd, fantasy spear, sword, magic staff, huge cannon, vehicle, robot, photorealistic, blurry, soft focus, text, watermark, logo, signature, cropped, noisy background, excessive detail, painterly, 3d render",
+  "width": 512,
+  "height": 512,
+  "steps": 24,
+  "cfg": 7.0,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 43300,
+  "candidateCount": 3,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/at-lancer"
+}

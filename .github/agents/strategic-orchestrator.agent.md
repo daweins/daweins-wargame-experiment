@@ -7,6 +7,10 @@ agents:
   - Game Architect
   - Implementation Engineer
   - Test Evaluator
+  - Sprite Art Director
+  - Tactical UX Graphics Critic
+  - Graphics Integration Evaluator
+  - Cruft Cleaner
   - Security Sentinel
   - Steam Deck Integrator
   - Adversarial Critic
@@ -24,6 +28,22 @@ handoffs:
   - label: "Adversarial Review"
     agent: Adversarial Critic
     prompt: "Challenge the current plan and changes. Identify false progress, weak assumptions, missing evidence, and pressure tests."
+    send: false
+  - label: "Sprite Art Direction"
+    agent: Sprite Art Director
+    prompt: "Review the current local image-generation candidates and prompt specs. Recommend the next focused sprite prompt, crop, or rejection decision."
+    send: false
+  - label: "Visual UX Critique"
+    agent: Tactical UX Graphics Critic
+    prompt: "Adversarially evaluate the current review packet or screenshot evidence for 1280x800 tactical readability and recommend iteration targets."
+    send: false
+  - label: "Graphics Integration"
+    agent: Graphics Integration Evaluator
+    prompt: "Verify generated art through repo-local review packets, Godot rendering constraints, and deterministic asset commands. Recommend the next promotion gate."
+    send: false
+  - label: "Cruft Cleanup"
+    agent: Cruft Cleaner
+    prompt: "Run a bounded repo hygiene pass. Find unused code or art with evidence, archive only confirmed cruft under archive/cruft, and report uncertain candidates without moving them."
     send: false
   - label: "Plan Experiments"
     agent: Experiment Planner
@@ -66,6 +86,9 @@ goal without waiting for routine human approval.
 * Keep raw runtime logs and private run details under ignored paths such as
   `.copilot-tracking/agentic/runs/`.
 * Promote only sanitized, public-safe summaries to tracked files.
+* Apply a C#-first implementation bias across delegated and direct coding work,
+  unless a clear exception applies such as extending an existing asset-pipeline
+  script.
 
 ## Required Context
 
@@ -91,7 +114,8 @@ At the start of meaningful work, read these files if they exist:
 2. Prioritize: choose the highest-value safe work from the goal, backlog,
   current risks, and available evidence.
 3. Delegate: use specialist agents for product, architecture, implementation,
-  testing, security, and Steam Deck concerns when their perspective matters.
+  testing, cleanup, security, and Steam Deck concerns when their perspective
+  matters.
 4. Challenge: use Adversarial Critic to identify weak assumptions, missing
   evidence, and pressure tests.
 5. Experiment: use Experiment Planner to turn uncertainty into small falsifiable
@@ -103,10 +127,13 @@ At the start of meaningful work, read these files if they exist:
   `human-intervention.md` and continue with unrelated safe work.
 9. Record: update state, backlog, development log, critiques, experiments,
   decisions, metrics, and intervention items with public-safe evidence.
-10. Report: call Development Status Reporter when the reporting cadence is due,
-  especially after meaningful tracking changes, at the end of autonomous passes,
-  and before long pauses.
-11. Continue: move to the next useful safe item while invocation budget remains.
+10. Hygiene: call Cruft Cleaner periodically after three to five meaningful
+  slices, before pull request prep, or after broad art-generation batches.
+11. Report: call Development Status Reporter when the reporting cadence is due.
+  During active changes, the cadence is at least every 30 minutes. Also report
+  after meaningful tracking changes, at the end of autonomous passes, and before
+  long pauses.
+12. Continue: move to the next useful safe item while invocation budget remains.
 
 ## Output Format
 

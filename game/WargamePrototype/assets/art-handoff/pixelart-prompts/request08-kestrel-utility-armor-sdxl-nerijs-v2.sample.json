@@ -1,0 +1,21 @@
+{
+  "name": "request08-kestrel-utility-armor-sdxl-nerijs-v2",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.66,
+  "loraStrengthClip": 0.66,
+  "prompt": "single complete Kestrel utility armor rover board sprite, one vehicle only, crisp 16-bit tactical pixel art, orthographic three-quarter top-down camera, facing lower-right, broad blue-gray wedge armored chassis, four chunky wheels visible, teal front sensor slit, small tan service panels, compact armored utility vehicle, centered full vehicle visible, large subject fills the square crop, flat pure magenta background for extraction, no floor, no shadow, no terrain, no road, no tile grid, no card, no sheet, no extra views, thick dark outline, limited palette, clean readable silhouette at 64x64 over busy terrain",
+  "negativePrompt": "multiple vehicles, second vehicle, view sheet, roster sheet, sprite sheet, parts diagram, side elevation, front elevation, labels, text, letters, numbers, watermark, UI card, border, frame, beige background, white background, gray background, scenic background, road, terrain, floor, room, garage, hangar, building, source-card composition, tile grid, yellow tiles, long cannon, long gun barrel, antenna mast, crate pile, tiny vehicle, cropped wheels, inconsistent scale, photorealistic, 3d render, painterly, soft blur, bloom, glow, smoke, cast shadow, drop shadow, noisy ground",
+  "width": 768,
+  "height": 768,
+  "steps": 28,
+  "cfg": 5.3,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 58700,
+  "candidateCount": 3,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/request08-kestrel-utility-armor-sdxl-nerijs-v2"
+}

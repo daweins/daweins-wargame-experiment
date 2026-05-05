@@ -1,0 +1,21 @@
+{
+  "name": "request11-road-autotiles-sdxl-nerijs-v1",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.55,
+  "loraStrengthClip": 0.55,
+  "prompt": "extractor-friendly road autotile concept sheet for a 2D turn-based tactical combat game, crisp 16-bit tactical pixel art, top-down board tiles, flat orthographic view, dusty industrial service-road tiles over dry basin ground, exactly 16 separated square road tiles in a 4 by 4 grid, no labels, no text, no card frame, no perspective, each road connection meets exactly at tile edge centers, include horizontal road, vertical road, four corners, four T junctions, four dead ends, one 4-way junction, and one bridge road deck sample, limited palette, low noise, readable when downsampled to 32x32",
+  "negativePrompt": "labels, text, letters, numbers, watermark, UI frame, presentation card, perspective scene, isometric, horizon, vehicles, characters, buildings, photorealistic, 3d render, painterly, soft blur, excessive texture, grass fantasy road, ornate stones, broken continuity, connections missing tile edge centers, tiny high-frequency noise",
+  "width": 1024,
+  "height": 1024,
+  "steps": 26,
+  "cfg": 5.0,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 61000,
+  "candidateCount": 1,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/request11-road-autotiles-sdxl-nerijs-v1"
+}

@@ -1,0 +1,21 @@
+{
+  "name": "mission2-relay-cinematic-sdxl-nerijs-v4",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.62,
+  "loraStrengthClip": 0.62,
+  "prompt": "widescreen 16-bit pixel art cinematic illustration, eye-level camera, visible horizon, not top-down, not isometric, damaged orbital relay yard at sunrise in a dusty basin, two tall failing communication masts leaning over a concrete service shed, tan shared fuel bladders with orange hazard caps, blue-gray Kestrel utility truck parked near teal diagnostic screens, orange warning lights, dusty vehicle tracks, grounded near-future industrial sci-fi, readable mission-briefing backdrop, open lower-left foreground reserved for dialogue panel, no text, no UI, no logo",
+  "negativePrompt": "top-down view, overhead map, isometric map, tilemap, asset sheet, sprite sheet, separate props, inventory icons, orthographic object sheet, labels, text, letters, numbers, logo, watermark, UI frame, speech bubble, photorealistic, 3d render, painterly oil painting, anime closeup, fantasy, magic, alien temple, modern city skyline, cluttered lower-left foreground, blurry, low contrast, overexposed, distorted relay towers, noisy tiny details",
+  "width": 1024,
+  "height": 576,
+  "steps": 28,
+  "cfg": 6.2,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 55200,
+  "candidateCount": 1,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/mission2-relay-cinematic-sdxl-nerijs-v4"
+}

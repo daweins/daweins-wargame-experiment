@@ -1,0 +1,19 @@
+{
+  "cutscene_id": "template_cutscene",
+  "style_profile": "snes_gbds_hybrid_v1",
+  "format_version": "1.0",
+  "frame_width": 320,
+  "frame_height": 180,
+  "frames": [
+    {
+      "id": "01_opening",
+      "file": "01_opening.png",
+      "duration_ms": 1200
+    }
+  ],
+  "sheet": {
+    "file": "template_cutscene_sheet.png",
+    "columns": 3,
+    "rows": 1
+  }
+}

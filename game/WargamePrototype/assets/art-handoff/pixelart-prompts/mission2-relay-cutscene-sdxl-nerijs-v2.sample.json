@@ -1,0 +1,21 @@
+{
+  "name": "mission2-relay-cutscene-sdxl-nerijs-v2",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.7,
+  "loraStrengthClip": 0.7,
+  "prompt": "16-bit pixel art widescreen tactical RPG cutscene background, consistent Kestrel Aster Basin visual style, damaged orbital relay yard at sunrise, two failing communication masts, service shed, low concrete pads, orange warning lights, Kestrel blue-gray utility equipment with teal screens, shared fuel cache with tan bladders and orange hazard caps, dusty vehicle tracks, grounded near-future industrial sci-fi, wide establishing composition, clear midground relay and fuel subjects, uncluttered lower third for dialogue UI, no critical detail in bottom quarter, readable at 1280x800, no text, no logos, no UI",
+  "negativePrompt": "photorealistic, 3d render, painterly oil painting, anime closeup, text, caption, logo, watermark, UI frame, border, speech bubble, fantasy, magic, alien temple, modern city skyline, cluttered lower third, foreground character closeup, blurry, low contrast, overexposed, distorted relay towers, illegible machinery",
+  "width": 1024,
+  "height": 576,
+  "steps": 26,
+  "cfg": 6.2,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 51200,
+  "candidateCount": 3,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/mission2-relay-cutscene-sdxl-nerijs-v2"
+}

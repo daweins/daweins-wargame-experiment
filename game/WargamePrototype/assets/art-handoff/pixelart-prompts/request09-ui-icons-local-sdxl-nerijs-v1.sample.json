@@ -1,0 +1,21 @@
+{
+  "name": "request09-ui-icons-local-sdxl-nerijs-v1",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.48,
+  "loraStrengthClip": 0.48,
+  "prompt": "extractor-friendly tactical UI icon mini sheet, exactly four large pixel icons in a 2 by 2 grid with wide gutters, transparent-style pure magenta background, no labels, no text, no borders, icon 1 move arrow with path dots, icon 2 attack crosshair impact, icon 3 repair wrench, icon 4 objective diamond, crisp 16-bit pixel UI, consistent thick outline, cyan and warm warning accents, centered symbols, readable at 20x20 pixels, simple flat shapes, no drop shadow",
+  "negativePrompt": "labels, text, letters, numbers, watermark, title, card, frame, border, colored sheet background, photorealistic, 3d render, painterly blur, gradient blur, tiny detail, thin lines, complex illustration, multiple extra icons, characters, vehicles, scenery, shadows, glow bloom",
+  "width": 768,
+  "height": 768,
+  "steps": 24,
+  "cfg": 4.7,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 63000,
+  "candidateCount": 2,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/request09-ui-icons-local-sdxl-nerijs-v1"
+}

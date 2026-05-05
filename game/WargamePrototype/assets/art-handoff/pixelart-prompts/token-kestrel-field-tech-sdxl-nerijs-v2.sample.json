@@ -1,0 +1,21 @@
+{
+  "name": "token-kestrel-field-tech-sdxl-nerijs-v2",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.7,
+  "loraStrengthClip": 0.7,
+  "prompt": "single tactical board unit sprite for a 16-bit turn-based strategy game, grounded industrial sci-fi pixel art, orthographic three-quarter top-down camera, facing lower-right, centered full body visible, one complete unit only, fills most of the final square crop, no inset composition, chunky readable silhouette, thick dark outline, limited 16-bit palette, crisp pixels, flat pure magenta background for extraction, no floor, no cast shadow, Kestrel expedition field tech infantry, short squat chibi proportions, oversized round helmet, teal visor, compact blue-gray armor vest, tan survey pack, tiny boots, arms close to body, practical survey hardware, readable when cropped to 64x64 over busy terrain",
+  "negativePrompt": "multiple characters, sprite sheet, turnaround sheet, duplicate poses, labels, text, letters, numbers, watermark, UI card, border, frame, white background, gray background, scenic background, floor plane, terrain, road, building, portrait, bust, closeup, front portrait view, side view, tall realistic human, long legs, thin limbs, tiny weapon lines, detailed face, anime closeup, photorealistic, 3d render, painterly, soft blur, bloom, glow, smoke, cast shadow, cropped feet, extra arms, extra legs, inconsistent scale",
+  "width": 768,
+  "height": 768,
+  "steps": 26,
+  "cfg": 5.6,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 57100,
+  "candidateCount": 2,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/token-kestrel-field-tech-sdxl-nerijs-v2"
+}

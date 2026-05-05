@@ -1,0 +1,21 @@
+{
+  "name": "token-kestrel-utility-armor-sdxl-nerijs-v2",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.7,
+  "loraStrengthClip": 0.7,
+  "prompt": "one compact military rover token, single tactical board vehicle sprite for a 16-bit turn-based strategy game, grounded industrial sci-fi pixel art, orthographic three-quarter top-down camera, facing lower-right, centered full vehicle visible, wheels visible, one complete vehicle only, fills most of the final square crop, chunky readable silhouette, strong 2 pixel dark outer outline, limited 16-bit palette, crisp pixels, flat pure magenta background for extraction, no environment, no floor, no cast shadow, no inset composition, Kestrel utility armor line vehicle, broad wedge rover chassis, blue-gray armor panels clearly separated from tan terrain colors, teal sensor slit on front, tan repair panel accents, compact turret nub, thick wheels or short tracks, wider and heavier than scout, readable as armor when cropped to 64x64 over busy terrain",
+  "negativePrompt": "multiple vehicles, sprite sheet, turnaround sheet, duplicate views, labels, text, letters, numbers, watermark, UI card, border, frame, white background, gray background, scenic background, floor plane, terrain, road, building, interior room, facility, tilemap, floor plan, equipment layout, modular panels, console, source-card composition, portrait, bust, closeup, side view, front view, modern tank photo, mech, humanoid robot, thin antenna forest, tiny decals, beige background, tan ground, photorealistic, 3d render, painterly, soft blur, bloom, glow, smoke, cast shadow, cropped wheels, cropped hull, inconsistent scale",
+  "width": 640,
+  "height": 640,
+  "steps": 28,
+  "cfg": 5.6,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 57500,
+  "candidateCount": 3,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/token-kestrel-utility-armor-sdxl-nerijs-v2"
+}

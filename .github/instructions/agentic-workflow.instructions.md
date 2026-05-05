@@ -36,6 +36,14 @@ orchestration docs, and long-running autonomous development workflows.
   exploration.
 * Never store credentials, tokens, private device details, or sensitive local
   paths in ledgers, prompts, or research artifacts.
+* Run periodic review at risk triggers: meaningful code slices, architecture
+  boundary changes, three to five autonomous slices, failed checks,
+  dependency/security changes, pre-commit work, and pull request prep.
+* Autofix accepted review suggestions only when they are bounded, local,
+  public-safe, and verifiable. Require independent acceptance for gameplay,
+  replay, save schema, dependency, security, or architecture changes.
+* Avoid no-issue churn. A review pass that finds no meaningful defect should
+  record evidence and make no cosmetic edits.
 
 ## Repo Work Tracking Contract
 
@@ -53,6 +61,11 @@ tracked public-safe files:
 * `decisions.md` for durable process, architecture, and product decisions
 * `metrics.md` for product, process, quality, and safety signals
 
+Related authority docs, such as
+`docs/game/code-quality-architecture-constitution.md`, should be read and
+followed when relevant. Do not churn stable authority docs unless a real rule,
+architecture, safety, or evidence gap needs to be fixed.
+
 Runtime ledgers belong under `.copilot-tracking/agentic/runs/`, which is ignored
 by git because prompts, logs, and local paths may contain sensitive details.
 If a summary is safe to preserve publicly, write it to the tracked work files or
@@ -65,6 +78,7 @@ Agents should report:
 * What they changed or learned
 * Files touched or inspected
 * Tests or checks run
+* Review findings, suggestion categories, accepted autofixes, and residual risk
 * Human intervention items created, updated, or resolved
 * Critique and experiment updates
 * Residual risks

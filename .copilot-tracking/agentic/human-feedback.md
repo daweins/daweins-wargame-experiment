@@ -17,6 +17,177 @@ Status values: `new`, `considered`, `adopted`, `rejected`, `deferred`.
 
 ## Feedback
 
+### H031: Tactical mission and campaign quality criteria
+
+Date: 2026-05-03
+
+Status: `adopted`
+
+Guidance: Research level design for a tactical game with multiple missions over
+a longer campaign. Increase strategy, fun, and variance. Create criteria for
+identifying good missions, bad missions, good campaign progression, and bad
+campaign progression.
+
+Disposition: Added `docs/game/mission-campaign-design-rubric.md` with criteria
+for mission tactical thesis, readable first decisions, objective pressure,
+meaningful plan space, map topology, AI doctrine, fairness, scoring, campaign
+lesson arcs, pacing rhythm, mechanic introduction budgets, unit-counter
+longevity, story escalation, anti-patterns, automated evidence, manual review
+questions, and promotion gates. Added follow-up tracking to apply the rubric to
+Missions 1-10 through a variance matrix and deterministic playtest evidence.
+
+### H024: Grounded interstellar travel mechanism
+
+Date: 2026-05-02
+
+Status: `adopted`
+
+Guidance: Develop a sci-fi grounded interstellar travel mechanism that supports
+the campaign politics, then update timelines and world flavor accordingly.
+
+Disposition: Added the Transit Thread and Spindle Net to
+`docs/game/universe-backstory.md`: scheduled beam corridors, fusion pushers,
+magsail braking fields, depots, manifests, fixed low-bandwidth FTL messaging,
+relay authentication, and transit permits. Updated the timeline, Caldera
+flavor, Inner Systems, Transit Nodes, campaign plot spine, and product goal so
+interstellar travel creates political leverage through freight slots, braking
+rights, courier delays, message priority, sanctions, and logistics without FTL
+travel.
+
+### H023: Grounded Loom and universe backstory
+
+Date: 2026-05-02
+
+Status: `adopted`
+
+Guidance: Sharpen the Loom because it is confusing, prefer realistic sci-fi,
+use more politics than illogical macguffins, and start developing universe
+backstory including history, political factions, worlds, and technologies.
+
+Disposition: Added `docs/game/universe-backstory.md`, reframed Asterite as a
+limited industrial material, reframed the Loom as field slang for the
+human-built Basin Stabilization Grid, updated the campaign plot spine,
+environment plan, character bible, product goal, active goal, and technical
+direction to prioritize grounded political and industrial sci-fi.
+
+### H022: Character backgrounds and commander identity
+
+Date: 2026-05-02
+
+Status: `adopted`
+
+Guidance: Based on the drafted campaign, plot, and missions, start developing
+detailed character backgrounds, personalities, motivations, arcs throughout the
+game, interactions, catch phrases, game-appropriate play strategies, unique
+units, and special powers.
+
+Disposition: Added `docs/game/campaign-character-bible.md` with character
+backgrounds, contradictions, campaign arcs, interaction hooks, voice examples,
+commander doctrine, candidate CO powers, charge patterns, signature-unit
+candidates, counterplay risks, Treaty Oversight Bureau and Loom voice guidance,
+and validation gates that keep character mechanics deterministic,
+forecast-visible, replayable, and optional until implemented.
+
+### H021: Campaign environment planning
+
+Date: 2026-05-02
+
+Status: `adopted`
+
+Guidance: Determine whether the campaign has environmental plans for each
+stage, then come up with interesting flavor, terrain, looks, and feels for the
+different environments.
+
+Disposition: Added `docs/game/campaign-environment-plan.md` with reusable
+environment kits, a compact terrain rule budget, detailed Missions 1-10
+environment beats, five-mission environment arcs through Mission 50, tile
+readability rules, mission-brief environment fields, and validation checks.
+
+### H020: Combat feedback readability
+
+Date: 2026-05-02
+
+Status: `adopted`
+
+Guidance: Think of ways to make combat more interesting and informative,
+including small animations, visible sprite damage indicators, and HP damage
+numerical animations.
+
+Disposition: Adopted as the next combat presentation direction. Prioritize
+short player-attack feedback first: floating HP loss numbers, HP bar and label
+tweening, hit flash or recoil, HP-threshold damage overlays, and clearer
+counterattack or terrain-defense callouts. Ordered enemy-phase playback,
+critical or glancing result tags, destruction attribution, and replay stepping
+should wait for structured combat events from the core instead of parsing text
+messages or inventing order from snapshots.
+
+### H018: First six mission unit ramp
+
+Date: 2026-05-02
+
+Status: `adopted`
+
+Guidance: Brainstorm unit types sufficient to support the first six missions,
+with one or two new unit types per mission during the ramp-up. Enemy and
+friendly units should overlap but not be exact. Include rock-paper-scissors
+triangles, support interactions, stats, descriptions, mission flavor, sprites,
+and introduction order.
+
+Disposition: Added a first-six-mission unit ramp document with a compact
+nine-unit roster, direct-combat and support counter loops, mission-by-mission
+introduction plan, stats, mission flavor, sprite plan, and implementation
+order. Extended the sprite generator with a separate campaign unit planning
+sheet.
+
+### H019: Campaign plot spine
+
+Date: 2026-05-02
+
+Status: `adopted`
+
+Guidance: Develop a detailed plot for the first 10 missions, starting with
+small stakes and personal survival, then revealing more of the wider plot as
+the campaign expands outward. Stakes should rise periodically, with short
+bursts where the player solves problems or beats the current adversary. Sketch
+the campaign in five-mission increments beyond that up to 50 missions.
+
+Disposition: Added `docs/game/campaign-plot-spine.md` with the Kestrel Survey
+Expedition premise, major factions, commander cast, Asterite mystery, detailed
+Missions 1-10, and modular five-mission arcs through Mission 50.
+
+### H030: Arena-first UX direction
+
+Date: 2026-05-02
+
+Status: `adopted`
+
+Guidance: Preserve the verbose sidebar during initial development, but treat it
+as outside the main game screen. Surface more of the decision-critical
+information inside the graphical arena itself.
+
+Disposition: Adopted as the next UX direction. The sidebar remains a verbose
+development inspector, while future player-readability work should make the
+arena and compact in-game HUD answer core tactical questions: objective state,
+selected mode, legal movement, legal attacks, Scout-7 rescue state, terrain
+value, combat forecast, readiness, and enemy pressure. Added a backlog item,
+critique, experiment, and decision for an arena-first HUD/readability spike.
+
+### H017: Periodic review and architecture constitution
+
+Date: 2026-05-02
+
+Status: `adopted`
+
+Guidance: Add instructions that require periodic code review and autofix of
+accepted suggestions. Research and write a code quality and architecture
+constitution for this project.
+
+Disposition: Added a project constitution for architecture boundaries, quality
+gates, review triggers, suggestion classification, autofix rules, stop
+conditions, and evidence standards. Wired the rules into repo-wide Copilot
+instructions, game instructions, agentic workflow instructions, and a new
+cross-cutting instruction file.
+
 ### H016: Board readability and road cleanup
 
 Date: 2026-05-02

@@ -1,0 +1,21 @@
+{
+  "name": "infantry-roster-sdxl-nerijs-v4",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.6,
+  "loraStrengthClip": 0.6,
+  "prompt": "clean concept sheet of eight small chibi tactical infantry sprites for a 16-bit turn-based tactics game, flat pure white background, no floor, no shadow, orthographic three-quarter top-down camera, every unit facing lower-right, same short squat proportions, oversized helmets, compact bodies, chunky pixel art, thick black outline, simple readable silhouettes, Kestrel blue-gray uniforms with teal visors and tan field gear: field tech with survey pack, expedition engineer with square repair backpack, AT lancer with long shoulder geology laser, field sapper with teal-marked satchel; Orison charcoal uniforms with orange hazard accents: raider trooper, sabotage engineer, breach sapper with orange satchel, breach lancer with angular launcher, large empty white spacing between sprites, no labels, readable when cropped to 64x64",
+  "negativePrompt": "text, letters, numbers, labels, watermark, logo, UI card, border, visible grid, gray background, floor, floor plane, cast shadow, drop shadow, road, terrain, landscape, buildings, vehicles, tall realistic humans, long legs, character portrait, anime closeup, multiple poses of same character, side view, front portrait view, dramatic perspective, photorealistic, 3d render, painterly, smooth blur, tiny limbs, thin weapons, antenna forest, loose cables, smoke, bloom, glow, cropped feet, overlapping soldiers, inconsistent scale, extra soldiers",
+  "width": 1152,
+  "height": 768,
+  "steps": 24,
+  "cfg": 5.2,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 53100,
+  "candidateCount": 1,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/infantry-roster-sdxl-nerijs-v4"
+}

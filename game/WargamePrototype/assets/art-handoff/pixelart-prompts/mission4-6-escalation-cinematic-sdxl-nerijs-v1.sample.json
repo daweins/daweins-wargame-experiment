@@ -1,0 +1,21 @@
+{
+  "name": "mission4-6-escalation-cinematic-sdxl-nerijs-v1",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.62,
+  "loraStrengthClip": 0.62,
+  "prompt": "three connected eye-level cinematic 16-bit pixel-art stills for Missions 4 through 6 of a grounded industrial sci-fi tactics campaign, widescreen contact sheet with clear gutters and no captions, panel one field fabricator activation in a dry survey depot, teal machinery accents and Kestrel blue-gray technicians; panel two Sable arrival in cold fog around antenna masts, disciplined blue-gray recon vehicles emerging, Kestrel team distant; panel three bridge demolition standoff over a concrete service span, Orison orange hazard charge lights and Kestrel armor holding the road, visible horizon, practical machinery, readable mission focal objects, crisp pixel art, limited palette, no text",
+  "negativePrompt": "top-down map, isometric board, sprite sheet, asset sheet, labels, captions, watermark, logo, UI frame, card layout, readable text, photorealistic, 3d render, painterly blur, fantasy magic, empty landscape, cropped focal object, tiny unreadable characters, excessive glow, overexposed fog",
+  "width": 1024,
+  "height": 576,
+  "steps": 26,
+  "cfg": 6.2,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 58400,
+  "candidateCount": 1,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/mission4-6-escalation-cinematic-sdxl-nerijs-v1"
+}

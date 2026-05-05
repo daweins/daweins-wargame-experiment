@@ -1,0 +1,18 @@
+{
+  "name": "utility-armor-sprite-v2",
+  "model": "v1-5-pruned-emaonly.safetensors",
+  "prompt": "single centered game sprite of one compact futuristic armored scout carrier, 2D pixel art, isolated object on plain white background, no frame, no border, no text, three-quarter top-down view, chunky SNES style pixels, hard black outline, simple readable silhouette for 64x64, blue-gray armor plates, cyan windshield slit, tan equipment panels, four small wheels partly hidden under hull, broad wedge front, short low turret, one object only",
+  "negativePrompt": "sprite sheet, multiple views, multiple objects, UI card, user interface, item box, menu, label, caption, text, numbers, border, grid, blueprint, icon frame, room interior, scene, landscape, road, grass, building, person, soldier, robot, mech, spaceship, abstract pattern, photorealistic, 3d render, realistic lighting, painterly, blurry, cropped, excessive detail",
+  "width": 512,
+  "height": 512,
+  "steps": 24,
+  "cfg": 7.5,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 45100,
+  "candidateCount": 4,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/utility-armor-sprite-v2"
+}

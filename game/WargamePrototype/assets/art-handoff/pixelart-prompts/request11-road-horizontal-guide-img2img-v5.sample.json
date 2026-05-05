@@ -1,0 +1,23 @@
+{
+  "name": "request11-road-horizontal-guide-img2img-v5",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.58,
+  "loraStrengthClip": 0.58,
+  "sourceImage": "game/WargamePrototype/assets/art-handoff/local-candidates/request11-topology-masks-v1/road-horizontal-guide.png",
+  "denoise": 0.86,
+  "prompt": "redraw the guide as finished high quality 16-bit pixel art terrain, one square top-down tactical board tile only, dry ochre basin with small pebbles and scrub, one horizontal cracked service road through exact center, road enters exactly at left edge center and right edge center with consistent width, dusty shoulders, tire-worn dark middle, chipped gravel edges, crisp tactical game terrain, low noise, no flat placeholder mask, no room or map, readable when reduced to 32x32",
+  "negativePrompt": "flat mask, unchanged guide, solid color band, empty beige field, blank road, simple rectangle, building, roof, room, interior, facility, floor plan, map scene, city block, parking lot, white grid lines, architecture plan, multiple tiles, tile sheet, labels, text, numbers, UI frame, card, perspective, isometric, horizon, vehicles, characters, photorealistic, 3d render, painterly blur, missing edge connections, road not centered, road not horizontal",
+  "width": 768,
+  "height": 768,
+  "steps": 32,
+  "cfg": 5.8,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 61340,
+  "candidateCount": 4,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/request11-road-horizontal-guide-img2img-v5"
+}

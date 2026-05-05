@@ -1,0 +1,21 @@
+{
+  "name": "request10-venn-portrait-sdxl-nerijs-v3",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.5,
+  "loraStrengthClip": 0.5,
+  "prompt": "one centered commander briefing portrait bust only, Dr. Elara Venn, Kestrel expedition director forced into field command, crisp 16-bit pixel art portrait, grounded near-future sci-fi, calm tired scientist-leader, practical headset, blue-gray expedition uniform collar, small teal comms light, head and shoulders only, three-quarter face view, centered in frame, plain dark neutral briefing background, no props, no documents, no screens, no side panels, clean readable face silhouette, limited palette, tactical dialogue portrait source art",
+  "negativePrompt": "UI cards, side cards, documents, maps, screens, panels, thumbnails, posters, text blocks, captions, labels, letters, numbers, barcode, watermark, logo, portrait sheet, multiple portraits, full body, character turnaround, extra people, battlefield scene, office wall clutter, frame border, menu interface, helmet covering face, cropped head, anime glamor, fantasy armor, photorealistic, 3d render, painterly blur, excessive glow",
+  "width": 768,
+  "height": 768,
+  "steps": 28,
+  "cfg": 4.9,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 62100,
+  "candidateCount": 3,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/request10-venn-portrait-sdxl-nerijs-v3"
+}

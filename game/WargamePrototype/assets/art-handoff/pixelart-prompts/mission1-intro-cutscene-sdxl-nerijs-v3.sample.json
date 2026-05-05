@@ -1,0 +1,21 @@
+{
+  "name": "mission1-intro-cutscene-sdxl-nerijs-v3",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.68,
+  "loraStrengthClip": 0.68,
+  "prompt": "16-bit pixel art widescreen tactical RPG cutscene background, Kestrel Aster Basin survey camp at pre-dawn, prefab science HQ modules, comm station, jammed relay mast with small teal status lights, basalt ridge silhouettes, dusty eastern access road with tiny distant contractor vehicles, blue-gray Kestrel equipment, tan dust, grounded near-future industrial sci-fi, consistent chunky pixel scale, readable shapes, wide establishing composition, clear midground HQ subject, lower third left mostly uncluttered for dialogue UI, no critical detail in bottom quarter, no text, no logos, no UI",
+  "negativePrompt": "photorealistic, 3d render, painterly oil painting, anime closeup, text, caption, logo, watermark, UI frame, border, speech bubble, fantasy, magic, alien temple, modern city skyline, cluttered lower third, foreground character closeup, blurry, low contrast, overexposed, distorted vehicles, illegible machinery, noisy tiny details",
+  "width": 1024,
+  "height": 576,
+  "steps": 26,
+  "cfg": 6.0,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 54000,
+  "candidateCount": 1,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/mission1-intro-cutscene-sdxl-nerijs-v3"
+}

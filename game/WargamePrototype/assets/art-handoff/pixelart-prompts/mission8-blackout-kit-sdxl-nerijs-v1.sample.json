@@ -1,0 +1,21 @@
+{
+  "name": "mission8-blackout-kit-sdxl-nerijs-v1",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.62,
+  "loraStrengthClip": 0.62,
+  "prompt": "transparent-background Mission 8 blackout prop and sprite concept sheet for a grounded 16-bit tactical combat game, twelve separated concepts in a loose grid, Treaty Oversight audit convoy token, tired auditor field-gear token, blacked-out supply warehouse, active supply warehouse variant, substation power-off prop, restored substation prop, sealed file terminal, restore-power marker, blackout overlay tile sample, emergency red-strip light prop, Orison remnant raider variant, Sable edge-pressure marker, orthographic three-quarter top-down board concepts, thick dark outlines, dim navy shadows, emergency red strips, gray warehouses, practical noncombatant convoy design, readable at 64x64, no labels",
+  "negativePrompt": "text, labels, letters, numbers, captions, logo, watermark, UI card, presentation border, terrain background, floor plane, cast shadow, photorealistic, 3d render, painterly blur, dramatic portrait, heroic fantasy, overbright neon, tiny unreadable details, crowded overlap, cropped props, duplicate views",
+  "width": 1152,
+  "height": 768,
+  "steps": 24,
+  "cfg": 5.8,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 58600,
+  "candidateCount": 1,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/mission8-blackout-kit-sdxl-nerijs-v1"
+}

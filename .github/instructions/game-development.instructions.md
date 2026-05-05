@@ -21,6 +21,10 @@ Use Godot 4.x as the leading engine candidate unless a later decision record
 selects a different stack. Keep the simulation core testable and independent
 from rendering wherever practical.
 
+Follow [Code Quality And Architecture Constitution](../../docs/game/code-quality-architecture-constitution.md)
+for architecture boundaries, quality gates, periodic review triggers, and
+autofix rules.
+
 ## Design Constraints
 
 * Design first for 1280x800 and 16:10, then validate 1280x720 and 1920x1080.
@@ -32,6 +36,12 @@ from rendering wherever practical.
 * Add tests for movement, combat forecast, terrain effects, capture, economy,
   turn transitions, save/load, and replay determinism before expanding content.
 * Prefer small maps and golden scenarios for automated playtesting.
+* Review code when gameplay rules, AI, scoring, replay, save/load, controller
+  flow, generated assets, or the Godot/core boundary changes.
+* Autofix mechanical and test-backed review findings when checks can verify the
+  result. Do not silently autofix balance, mission design, replay format, save
+  schema, architecture boundary, dependency, or security changes without
+  independent acceptance.
 
 ## Steam Deck Workflow
 

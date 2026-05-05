@@ -1,0 +1,18 @@
+{
+  "name": "scout-buggy",
+  "model": "v1-5-pruned-emaonly.safetensors",
+  "prompt": "single isolated 16-bit tactical RPG vehicle sprite, compact near-future scout buggy only, centered on plain transparent-looking flat background, three-quarter front view, readable 64x64 silhouette, olive and tan Kestrel survey colors, hard black outline, chunky pixel clusters, no environment, no characters, no buildings, no terrain, game asset candidate",
+  "negativePrompt": "tilemap, tactical map, scene, landscape, grass field, grid, road, building, house, shrine, character, person, soldier, robot, multiple objects, photorealistic, blurry, soft focus, text, watermark, logo, signature, extra wheels, malformed vehicle, cropped, noisy background, excessive detail, painterly, 3d render",
+  "width": 512,
+  "height": 512,
+  "steps": 24,
+  "cfg": 7.0,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 41000,
+  "candidateCount": 8,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/scout-buggy"
+}

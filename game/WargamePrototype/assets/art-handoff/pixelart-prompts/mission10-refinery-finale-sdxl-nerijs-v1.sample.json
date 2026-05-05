@@ -1,0 +1,21 @@
+{
+  "name": "mission10-refinery-finale-sdxl-nerijs-v1",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.62,
+  "loraStrengthClip": 0.62,
+  "prompt": "transparent-background Mission 10 Orison refinery finale prop and unit concept sheet for a grounded 16-bit tactical combat game, sixteen separated concepts in a loose grid, refinery HQ property tile, smokestack prop, conveyor road tile, power siphon with restrained teal glow, legal claim billboard without readable text, compliance server rack, refinery security infantry, refinery security armor, Director Sloane command marker not a portrait, Siege Breaker wide heavy vehicle, production bay tile, income cache tile, refinery capture overlay, commander defeat overlay, emergency broadcast antenna, damaged refinery prop, orthographic three-quarter top-down board concepts, charcoal gray industrial black, orange hazard accents, molten copper lights, thick dark outlines, readable at 64x64, no labels",
+  "negativePrompt": "text, readable letters, numbers, captions, labels, logo, watermark, UI cards, presentation border, terrain background, floor plane, cast shadow, photorealistic, 3d render, painterly, fantasy, excessive teal glow, giant empty factory, tiny clutter, overlapping concepts, cropped units, portrait closeup",
+  "width": 1152,
+  "height": 768,
+  "steps": 24,
+  "cfg": 5.8,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 58700,
+  "candidateCount": 1,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/mission10-refinery-finale-sdxl-nerijs-v1"
+}

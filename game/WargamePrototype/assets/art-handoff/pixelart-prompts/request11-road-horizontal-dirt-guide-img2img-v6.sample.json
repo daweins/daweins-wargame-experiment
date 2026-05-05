@@ -1,0 +1,23 @@
+{
+  "name": "request11-road-horizontal-dirt-guide-img2img-v6",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.48,
+  "loraStrengthClip": 0.48,
+  "sourceImage": "game/WargamePrototype/assets/art-handoff/local-candidates/request11-topology-masks-v1/road-horizontal-dirt-guide.png",
+  "denoise": 0.58,
+  "prompt": "polish the guide into finished pixel art while preserving its layout, one square top-down tactical terrain tile only, dry ochre battlefield ground, one straight horizontal dusty dirt service road across the exact center, road enters exactly at left edge center and right edge center with unchanged width, tire tracks and chipped gravel shoulders, small pebbles and scrub outside the road, no water, no walls, no rooms, no buildings, no map scene, crisp 16-bit tactical board tile, readable at 32x32",
+  "negativePrompt": "water, canal, river, lake, dark pool, room, interior, wall, roof, building, plaza, courtyard, city map, floor plan, architecture plan, bunker, bridge, multiple roads, crossroads, corner road, vertical road, multiple tiles, tile sheet, labels, text, numbers, UI frame, card, perspective, isometric, horizon, vehicles, characters, flat mask, unchanged guide, solid color band, blank road, photorealistic, 3d render, painterly blur, missing edge connections, road not centered, road not horizontal",
+  "width": 768,
+  "height": 768,
+  "steps": 28,
+  "cfg": 5.0,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 61360,
+  "candidateCount": 4,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/request11-road-horizontal-dirt-guide-img2img-v6"
+}

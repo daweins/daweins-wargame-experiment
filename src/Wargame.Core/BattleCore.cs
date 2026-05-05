@@ -12,6 +12,7 @@ public enum BattleOutcome
 
 public enum CommandKind
 {
+    ActivatePower,
     Move,
     Attack,
     Wait,
@@ -30,15 +31,34 @@ public enum TerrainType
     Road,
     Cover,
     Hq,
-    Ridge
+    Ridge,
+    River,
+    Workshop
 }
 
 public enum UnitType
 {
     Infantry,
     Armor,
-    Scout
+    Scout,
+    Engineer,
+    Sapper,
+    Lancer,
+    Striker,
+    FieldRig,
+    SiegeBreaker
 }
+
+public sealed record CampaignMissionBrief(
+    int Number,
+    string Id,
+    string Title,
+    string Subtitle,
+    string ObjectiveSummary,
+    string RescueInstruction,
+    string IntroLine,
+    string VictoryLine,
+    string DefeatLine);
 
 public readonly record struct BattleCommand(
     CommandKind Kind,
@@ -46,6 +66,9 @@ public readonly record struct BattleCommand(
     TileCoord Destination,
     string TargetUnitId)
 {
+    public static BattleCommand ActivatePower(string powerId) =>
+        new(CommandKind.ActivatePower, powerId, TileCoord.None, string.Empty);
+
     public static BattleCommand Attack(string unitId, string targetUnitId) =>
         new(CommandKind.Attack, unitId, TileCoord.None, targetUnitId);
 
@@ -93,6 +116,12 @@ public readonly record struct TileCoord(int X, int Y)
 
 public sealed class BattleState
 {
+    public const string LockTheLinePowerId = "lock-the-line";
+
+    public const int LockTheLineChargeCost = 4;
+
+    public const int PropertyIncomeValue = 1000;
+
     public BattleState(int width, int height, TerrainType[] terrain)
     {
         Width = width;
@@ -112,9 +141,41 @@ public sealed class BattleState
 
     public int InitialEnemyCount { get; set; }
 
+    public TileCoord FuelCache { get; init; } = TileCoord.None;
+
+    public int FuelCaptureProgress { get; set; }
+
+    public string FuelObjectiveName { get; set; } = "Fuel";
+
+    public bool FuelSecured { get; set; }
+
+    public string IntroLine { get; set; } = "Venn: We came here to measure rock, not doctrine.";
+
+    public string MissionId { get; init; } = "mission1";
+
+    public int MissionNumber { get; set; } = 1;
+
+    public bool PlayerLockTheLineActive { get; set; }
+
+    public int PlayerPowerCharge { get; set; }
+
+    public string PlayerPowerId { get; set; } = LockTheLinePowerId;
+
+    public string MissionSubtitle { get; set; } = "A survey camp becomes a defensive line before dawn.";
+
+    public string MissionTitle { get; init; } = "Scout-7 Is Late";
+
+    public string ObjectiveSummary { get; set; } = "Hold HQ, reach Scout-7, then defeat raiders.";
+
     public BattleOutcome Outcome { get; set; } = BattleOutcome.InProgress;
 
     public TileCoord PlayerHq { get; init; }
+
+    public int PlayerControlledProperties { get; set; }
+
+    public int PlayerFunds { get; set; }
+
+    public int PlayerIncome { get; set; }
 
     public int PlayerLosses { get; set; }
 
@@ -123,6 +184,24 @@ public sealed class BattleState
     public string ScoutId { get; init; } = "p-scout";
 
     public bool ScoutRescued { get; set; }
+
+    public TileCoord RelayStation { get; init; } = TileCoord.None;
+
+    public int RelayCaptureProgress { get; set; }
+
+    public string RelayObjectiveName { get; set; } = "Relay";
+
+    public bool RelaySecured { get; set; }
+
+    public bool RequiresScoutSurvival { get; init; } = true;
+
+    public string RescueInstruction { get; set; } = "Rescue Scout-7: move infantry or armor to a tile directly next to them.";
+
+    public bool RequiresRoutAfterObjectives { get; set; } = true;
+
+    public string VictoryLine { get; set; } = "Sloane: You survived first contact. Now prove it was not luck.";
+
+    public string DefeatLine { get; set; } = "Venn: Pull the recording. We missed the decision point.";
 
     public TerrainType[] Terrain { get; }
 
@@ -142,14 +221,39 @@ public sealed class BattleState
             CommandCount = CommandCount,
             EnemyHq = EnemyHq,
             EnemyLosses = EnemyLosses,
+            FuelCache = FuelCache,
+            FuelCaptureProgress = FuelCaptureProgress,
+            FuelObjectiveName = FuelObjectiveName,
+            FuelSecured = FuelSecured,
             InitialEnemyCount = InitialEnemyCount,
+            IntroLine = IntroLine,
+            MissionId = MissionId,
+            MissionNumber = MissionNumber,
+            MissionSubtitle = MissionSubtitle,
+            MissionTitle = MissionTitle,
+            ObjectiveSummary = ObjectiveSummary,
             Outcome = Outcome,
+            PlayerLockTheLineActive = PlayerLockTheLineActive,
+            PlayerPowerCharge = PlayerPowerCharge,
+            PlayerPowerId = PlayerPowerId,
+            PlayerControlledProperties = PlayerControlledProperties,
+            PlayerFunds = PlayerFunds,
             PlayerHq = PlayerHq,
+            PlayerIncome = PlayerIncome,
             PlayerLosses = PlayerLosses,
             RandomSeed = RandomSeed,
+            RelayStation = RelayStation,
+            RelayCaptureProgress = RelayCaptureProgress,
+            RelayObjectiveName = RelayObjectiveName,
+            RelaySecured = RelaySecured,
+            RequiresScoutSurvival = RequiresScoutSurvival,
+            RescueInstruction = RescueInstruction,
+            RequiresRoutAfterObjectives = RequiresRoutAfterObjectives,
             ScoutId = ScoutId,
             ScoutRescued = ScoutRescued,
-            Turn = Turn
+            Turn = Turn,
+            VictoryLine = VictoryLine,
+            DefeatLine = DefeatLine
         };
 
         clone.Units.AddRange(Units.Select(unit => unit.Clone()));
@@ -163,6 +267,8 @@ public sealed class BattleState
 
 public sealed class UnitState
 {
+    public int Ammo { get; set; } = -1;
+
     public required string Id { get; init; }
 
     public bool HasActed { get; set; }
@@ -170,6 +276,8 @@ public sealed class UnitState
     public bool HasMoved { get; set; }
 
     public int Hp { get; set; }
+
+    public int MaxAmmo { get; set; } = -1;
 
     public TileCoord Position { get; set; }
 
@@ -181,10 +289,12 @@ public sealed class UnitState
 
     public UnitState Clone() => new()
     {
+        Ammo = Ammo,
         HasActed = HasActed,
         HasMoved = HasMoved,
         Hp = Hp,
         Id = Id,
+        MaxAmmo = MaxAmmo,
         Position = Position,
         Team = Team,
         Type = Type
@@ -197,7 +307,13 @@ public static class BattleRules
     {
         [UnitType.Infantry] = new(UnitType.Infantry, 10, 3, 5, 1),
         [UnitType.Armor] = new(UnitType.Armor, 14, 4, 7, 3),
-        [UnitType.Scout] = new(UnitType.Scout, 8, 5, 4, 0)
+        [UnitType.Scout] = new(UnitType.Scout, 8, 5, 4, 0),
+        [UnitType.Engineer] = new(UnitType.Engineer, 9, 3, 3, 0),
+        [UnitType.Sapper] = new(UnitType.Sapper, 8, 4, 4, 0),
+        [UnitType.Lancer] = new(UnitType.Lancer, 9, 3, 8, 1),
+        [UnitType.Striker] = new(UnitType.Striker, 10, 5, 5, 1),
+        [UnitType.FieldRig] = new(UnitType.FieldRig, 12, 3, 2, 2),
+        [UnitType.SiegeBreaker] = new(UnitType.SiegeBreaker, 16, 3, 9, 4)
     };
 
     public static CommandResult ApplyCommand(BattleState state, BattleCommand command)
@@ -209,6 +325,7 @@ public static class BattleRules
 
         return command.Kind switch
         {
+            CommandKind.ActivatePower => ApplyActivatePower(state, command.UnitId),
             CommandKind.Move => ApplyMove(state, command.UnitId, command.Destination),
             CommandKind.Attack => ApplyAttack(state, command.UnitId, command.TargetUnitId),
             CommandKind.Wait => ApplyWait(state, command.UnitId),
@@ -242,6 +359,7 @@ public static class BattleRules
 
         return attacker.Position.Neighbors()
             .Where(state.Contains)
+            .Where(_ => HasAttackAmmo(attacker))
             .Where(coord => GetLivingUnitAt(state, coord)?.Team != attacker.Team)
             .Where(coord => GetLivingUnitAt(state, coord) is not null)
             .OrderBy(coord => coord.Y)
@@ -251,6 +369,11 @@ public static class BattleRules
 
     public static CombatForecast GetCombatForecast(BattleState state, UnitState attacker, UnitState defender)
     {
+        if (!HasAttackAmmo(attacker))
+        {
+            return new CombatForecast(0, 0, 0, 0, 0, 0);
+        }
+
         var expectedDamage = ExpectedDamage(state, attacker, defender);
         var counterExpectedDamage = CanCounterAttack(attacker, defender)
             ? ExpectedDamage(state, defender, attacker)
@@ -289,7 +412,7 @@ public static class BattleRules
 
             foreach (var neighbor in current.Neighbors().Where(state.Contains))
             {
-                if (IsBlockedForMovement(state, unit, neighbor))
+                if (IsBlockedForTraversal(state, unit, neighbor))
                 {
                     continue;
                 }
@@ -311,16 +434,23 @@ public static class BattleRules
             }
         }
 
-        return remainingMove.Keys.OrderBy(coord => coord.Y).ThenBy(coord => coord.X).ToList();
+        return remainingMove.Keys
+            .Where(coord => coord == unit.Position || GetLivingUnitAt(state, coord) is null)
+            .OrderBy(coord => coord.Y)
+            .ThenBy(coord => coord.X)
+            .ToList();
     }
 
     public static string GetStateHash(BattleState state)
     {
         var builder = new StringBuilder();
-        builder.Append($"turn={state.Turn};team={state.ActiveTeam};outcome={state.Outcome};scout={state.ScoutRescued};seed={state.RandomSeed};");
+        builder.Append($"mission={state.MissionId};turn={state.Turn};team={state.ActiveTeam};outcome={state.Outcome};scout={state.ScoutRescued};seed={state.RandomSeed};");
+        builder.Append($"power={state.PlayerPowerId}:{state.PlayerPowerCharge}:{state.PlayerLockTheLineActive};");
+        builder.Append($"economy={state.PlayerControlledProperties}:{state.PlayerIncome}:{state.PlayerFunds};");
+        builder.Append($"relay={state.RelayStation}:{state.RelayCaptureProgress}:{state.RelaySecured};fuel={state.FuelCache}:{state.FuelCaptureProgress}:{state.FuelSecured};requiresScout={state.RequiresScoutSurvival};");
         foreach (var unit in state.Units.OrderBy(unit => unit.Id, StringComparer.Ordinal))
         {
-            builder.Append($"{unit.Id}:{unit.Team}:{unit.Type}:{unit.Hp}:{unit.Position.X}:{unit.Position.Y}:{unit.HasMoved}:{unit.HasActed};");
+            builder.Append($"{unit.Id}:{unit.Team}:{unit.Type}:{unit.Hp}:{unit.Position.X}:{unit.Position.Y}:{unit.HasMoved}:{unit.HasActed}:{unit.Ammo}:{unit.MaxAmmo};");
         }
 
         var bytes = SHA256.HashData(Encoding.UTF8.GetBytes(builder.ToString()));
@@ -344,18 +474,25 @@ public static class BattleRules
             return new CommandResult(false, "That unit cannot attack now.");
         }
 
+        if (!HasAttackAmmo(attacker))
+        {
+            return new CommandResult(false, "That unit has no ammo.");
+        }
+
         if (attacker.Position.DistanceTo(defender.Position) != 1)
         {
             return new CommandResult(false, "Targets must be adjacent for this prototype.");
         }
 
         var attackDamage = RollDamage(state, attacker, defender);
+        SpendAmmo(attacker);
         ApplyDamage(state, defender, attackDamage);
         var message = $"{attacker.Id} hits {defender.Id} for {attackDamage}.";
 
         if (defender.IsAlive && CanCounterAttack(attacker, defender))
         {
             var counterDamage = RollDamage(state, defender, attacker);
+            SpendAmmo(defender);
             ApplyDamage(state, attacker, counterDamage);
             message += $" Counterfire deals {counterDamage}.";
         }
@@ -365,6 +502,34 @@ public static class BattleRules
         TryAutoRescue(state);
         CheckObjectives(state);
         return new CommandResult(true, message);
+    }
+
+    private static CommandResult ApplyActivatePower(BattleState state, string powerId)
+    {
+        if (state.ActiveTeam != Team.Player)
+        {
+            return new CommandResult(false, "Commander powers can only be activated during the player phase.");
+        }
+
+        if (!string.Equals(powerId, state.PlayerPowerId, StringComparison.Ordinal))
+        {
+            return new CommandResult(false, "That commander power is not available.");
+        }
+
+        if (state.PlayerLockTheLineActive)
+        {
+            return new CommandResult(false, "A commander power is already active.");
+        }
+
+        if (state.PlayerPowerCharge < BattleState.LockTheLineChargeCost)
+        {
+            return new CommandResult(false, "Commander power charge is too low.");
+        }
+
+        state.PlayerPowerCharge -= BattleState.LockTheLineChargeCost;
+        state.PlayerLockTheLineActive = true;
+        state.CommandCount++;
+        return new CommandResult(true, "Rusk activates Lock The Line. Units that held position gain +1 defense until the next player turn.");
     }
 
     private static CommandResult ApplyEndTurn(BattleState state)
@@ -381,6 +546,8 @@ public static class BattleRules
                 state.Turn++;
                 ResetTeam(state, Team.Player);
                 state.ActiveTeam = Team.Player;
+                AwardPlayerIncome(state);
+                ExpirePlayerPower(state);
                 TryAutoRescue(state);
                 CheckObjectives(state);
             }
@@ -391,6 +558,8 @@ public static class BattleRules
         state.Turn++;
         ResetTeam(state, Team.Player);
         state.ActiveTeam = Team.Player;
+        AwardPlayerIncome(state);
+        ExpirePlayerPower(state);
         CheckObjectives(state);
         return new CommandResult(true, "Player turn begins.");
     }
@@ -430,6 +599,21 @@ public static class BattleRules
             return new CommandResult(false, "That unit cannot wait now.");
         }
 
+        if (TryApplyMissionObjectiveWait(state, unit, out var objectiveResult))
+        {
+            return objectiveResult;
+        }
+
+        if (TryApplyFieldRigResupply(state, unit, out var resupplyResult))
+        {
+            return resupplyResult;
+        }
+
+        if (TryApplyWorkshopRepair(state, unit, out var repairResult))
+        {
+            return repairResult;
+        }
+
         unit.HasActed = true;
         state.CommandCount++;
         TryAutoRescue(state);
@@ -437,11 +621,75 @@ public static class BattleRules
         return new CommandResult(true, $"{unit.Id} holds position.");
     }
 
+    private static bool TryApplyMissionObjectiveWait(BattleState state, UnitState unit, out CommandResult result)
+    {
+        result = new CommandResult(false, string.Empty);
+        if (unit.Team != Team.Player || unit.Type is not (UnitType.Infantry or UnitType.Engineer or UnitType.FieldRig))
+        {
+            return false;
+        }
+
+        if (unit.Position == state.RelayStation && !state.RelaySecured)
+        {
+            state.RelayCaptureProgress++;
+            if (state.RelayCaptureProgress >= 2)
+            {
+                state.RelaySecured = true;
+                CaptureProperty(state);
+            }
+
+            CompleteObjectiveWait(state, unit);
+            result = new CommandResult(true, state.RelaySecured
+                ? $"{unit.Id} secures {state.RelayObjectiveName}."
+                : $"{unit.Id} starts {state.RelayObjectiveName} capture ({state.RelayCaptureProgress}/2). Hold the tile one more turn.");
+            return true;
+        }
+
+        if (unit.Position == state.FuelCache && !state.FuelSecured)
+        {
+            state.FuelCaptureProgress++;
+            if (state.FuelCaptureProgress >= 2)
+            {
+                state.FuelSecured = true;
+                CaptureProperty(state);
+            }
+
+            CompleteObjectiveWait(state, unit);
+            result = new CommandResult(true, state.FuelSecured
+                ? $"{unit.Id} secures {state.FuelObjectiveName}."
+                : $"{unit.Id} starts {state.FuelObjectiveName} capture ({state.FuelCaptureProgress}/2). Hold the tile one more turn.");
+            return true;
+        }
+
+        return false;
+    }
+
+    private static void CompleteObjectiveWait(BattleState state, UnitState unit)
+    {
+        unit.HasActed = true;
+        state.CommandCount++;
+        CheckObjectives(state);
+    }
+
+    private static void AwardPlayerIncome(BattleState state)
+    {
+        if (state.PlayerIncome > 0)
+        {
+            state.PlayerFunds += state.PlayerIncome;
+        }
+    }
+
+    private static void CaptureProperty(BattleState state)
+    {
+        state.PlayerControlledProperties++;
+        state.PlayerIncome += BattleState.PropertyIncomeValue;
+    }
+
     private static bool CanAct(BattleState state, UnitState unit) =>
         unit.IsAlive && !unit.HasActed && !IsScoutStranded(state, unit);
 
     private static bool CanCounterAttack(UnitState attacker, UnitState defender) =>
-        defender.Position.DistanceTo(attacker.Position) == 1 && defender.Type != UnitType.Scout;
+        defender.Position.DistanceTo(attacker.Position) == 1 && defender.Type != UnitType.Scout && HasAttackAmmo(defender);
 
     private static bool CanMove(BattleState state, UnitState unit) =>
         unit.IsAlive && !unit.HasMoved && !unit.HasActed && !IsScoutStranded(state, unit);
@@ -454,7 +702,7 @@ public static class BattleRules
         }
 
         var scout = FindUnit(state, state.ScoutId);
-        if (scout is null || !scout.IsAlive)
+        if (state.RequiresScoutSurvival && (scout is null || !scout.IsAlive))
         {
             state.Outcome = BattleOutcome.PlayerDefeat;
             return;
@@ -467,6 +715,21 @@ public static class BattleRules
         }
 
         var enemiesAlive = state.Units.Any(unit => unit.IsAlive && unit.Team == Team.Enemy);
+        var requiresRelay = state.RelayStation != TileCoord.None;
+        var requiresFuel = state.FuelCache != TileCoord.None;
+        if (requiresRelay || requiresFuel)
+        {
+            var relayComplete = !requiresRelay || state.RelaySecured;
+            var fuelComplete = !requiresFuel || state.FuelSecured;
+            var routComplete = !state.RequiresRoutAfterObjectives || !enemiesAlive;
+            if (relayComplete && fuelComplete && routComplete)
+            {
+                state.Outcome = BattleOutcome.PlayerVictory;
+            }
+
+            return;
+        }
+
         if (state.ScoutRescued && !enemiesAlive)
         {
             state.Outcome = BattleOutcome.PlayerVictory;
@@ -478,7 +741,7 @@ public static class BattleRules
         var attackerProfile = GetProfile(attacker.Type);
         var defenderProfile = GetProfile(defender.Type);
         var matchup = GetMatchupModifier(attacker.Type, defender.Type);
-        var terrainDefense = GetTerrainDefense(state.GetTerrain(defender.Position));
+        var terrainDefense = GetTerrainDefense(state.GetTerrain(defender.Position)) + GetPowerDefenseDelta(state, defender);
         var healthScale = Math.Max(1, attacker.Hp) / 4;
         return Math.Clamp(attackerProfile.Attack + healthScale + matchup - defenderProfile.Defense - terrainDefense, 1, defender.Hp);
     }
@@ -509,8 +772,24 @@ public static class BattleRules
     private static int GetMatchupModifier(UnitType attacker, UnitType defender) => (attacker, defender) switch
     {
         (UnitType.Armor, UnitType.Infantry) => 2,
+        (UnitType.Armor, UnitType.Sapper) => 2,
+        (UnitType.Armor, UnitType.Striker) => 1,
         (UnitType.Infantry, UnitType.Scout) => 1,
+        (UnitType.Infantry, UnitType.Sapper) => 2,
+        (UnitType.Infantry, UnitType.Lancer) => -1,
+        (UnitType.Lancer, UnitType.Armor) => 3,
+        (UnitType.Lancer, UnitType.SiegeBreaker) => 2,
+        (UnitType.Striker, UnitType.Engineer) => 2,
+        (UnitType.Striker, UnitType.FieldRig) => 2,
+        (UnitType.SiegeBreaker, UnitType.Armor) => 2,
+        (UnitType.SiegeBreaker, UnitType.Infantry) => 1,
+        (UnitType.FieldRig, UnitType.Sapper) => -1,
+        (UnitType.Sapper, UnitType.Engineer) => 2,
+        (UnitType.Sapper, UnitType.FieldRig) => 2,
+        (UnitType.Sapper, UnitType.Armor) => -1,
+        (UnitType.Engineer, UnitType.Armor) => -2,
         (UnitType.Scout, UnitType.Infantry) => 1,
+        (UnitType.Scout, UnitType.Engineer) => 1,
         (UnitType.Infantry, UnitType.Armor) => -2,
         (UnitType.Scout, UnitType.Armor) => -3,
         _ => 0
@@ -521,7 +800,9 @@ public static class BattleRules
         TerrainType.Road => 1,
         TerrainType.Plain => 1,
         TerrainType.Hq => 1,
+        TerrainType.Workshop => 1,
         TerrainType.Cover => 2,
+        TerrainType.River => 99,
         TerrainType.Ridge => 99,
         _ => 1
     };
@@ -533,15 +814,30 @@ public static class BattleRules
         _ => 0
     };
 
-    private static bool IsBlockedForMovement(BattleState state, UnitState movingUnit, TileCoord coord)
+    private static int GetPowerDefenseDelta(BattleState state, UnitState defender) =>
+        state.PlayerLockTheLineActive &&
+        state.ActiveTeam == Team.Enemy &&
+        defender.Team == Team.Player &&
+        !defender.HasMoved &&
+        IsGroundCombatUnit(defender)
+            ? 1
+            : 0;
+
+    private static bool HasAttackAmmo(UnitState unit) => unit.Ammo != 0;
+
+    private static bool NeedsAmmo(UnitState unit) => unit.MaxAmmo > 0 && unit.Ammo < unit.MaxAmmo;
+
+    private static bool IsGroundCombatUnit(UnitState unit) => unit.Type != UnitType.FieldRig;
+
+    private static bool IsBlockedForTraversal(BattleState state, UnitState movingUnit, TileCoord coord)
     {
-        if (state.GetTerrain(coord) == TerrainType.Ridge)
+        if (state.GetTerrain(coord) is TerrainType.Ridge or TerrainType.River)
         {
             return true;
         }
 
         var occupant = GetLivingUnitAt(state, coord);
-        return occupant is not null && occupant.Id != movingUnit.Id;
+        return occupant is not null && occupant.Id != movingUnit.Id && occupant.Team != movingUnit.Team;
     }
 
     private static bool IsScoutProtectedByOpeningGrace(BattleState state, UnitState unit) =>
@@ -553,6 +849,66 @@ public static class BattleRules
         return state.RandomSeed;
     }
 
+    private static void SpendAmmo(UnitState unit)
+    {
+        if (unit.Ammo > 0)
+        {
+            unit.Ammo--;
+        }
+    }
+
+    private static bool TryApplyFieldRigResupply(BattleState state, UnitState unit, out CommandResult result)
+    {
+        result = new CommandResult(false, string.Empty);
+        if (unit.Type != UnitType.FieldRig)
+        {
+            return false;
+        }
+
+        var target = state.Units
+            .Where(candidate => candidate.IsAlive && candidate.Team == unit.Team && candidate.Id != unit.Id)
+            .Where(candidate => candidate.Position.DistanceTo(unit.Position) == 1)
+            .Where(NeedsAmmo)
+            .OrderBy(candidate => candidate.Ammo)
+            .ThenBy(candidate => candidate.Id, StringComparer.Ordinal)
+            .FirstOrDefault();
+
+        if (target is null)
+        {
+            return false;
+        }
+
+        target.Ammo++;
+        unit.HasActed = true;
+        state.CommandCount++;
+        CheckObjectives(state);
+        result = new CommandResult(true, $"{unit.Id} resupplies {target.Id} ammo ({target.Ammo}/{target.MaxAmmo}).");
+        return true;
+    }
+
+    private static bool TryApplyWorkshopRepair(BattleState state, UnitState unit, out CommandResult result)
+    {
+        result = new CommandResult(false, string.Empty);
+        if (state.GetTerrain(unit.Position) != TerrainType.Workshop)
+        {
+            return false;
+        }
+
+        var profile = GetProfile(unit.Type);
+        if (unit.Hp >= profile.MaxHp)
+        {
+            return false;
+        }
+
+        var before = unit.Hp;
+        unit.Hp = Math.Min(profile.MaxHp, unit.Hp + 3);
+        unit.HasActed = true;
+        state.CommandCount++;
+        CheckObjectives(state);
+        result = new CommandResult(true, $"{unit.Id} repairs at workshop ({before}->{unit.Hp} HP).");
+        return true;
+    }
+
     private static void ApplyDamage(BattleState state, UnitState defender, int damage)
     {
         if (!defender.IsAlive)
@@ -561,6 +917,11 @@ public static class BattleRules
         }
 
         defender.Hp = Math.Max(0, defender.Hp - damage);
+        if (defender.Team == Team.Player && defender.IsAlive)
+        {
+            state.PlayerPowerCharge = Math.Min(BattleState.LockTheLineChargeCost, state.PlayerPowerCharge + 1);
+        }
+
         if (defender.Hp > 0)
         {
             return;
@@ -574,6 +935,11 @@ public static class BattleRules
         {
             state.EnemyLosses++;
         }
+    }
+
+    private static void ExpirePlayerPower(BattleState state)
+    {
+        state.PlayerLockTheLineActive = false;
     }
 
     private static void ResetTeam(BattleState state, Team team)
@@ -662,6 +1028,109 @@ public static class BattleRules
         if (rescuerAdjacent)
         {
             state.ScoutRescued = true;
+        }
+    }
+}
+
+public static class SecondMissionFactory
+{
+    public static BattleState Create()
+    {
+        const int width = 14;
+        const int height = 9;
+        var terrain = Enumerable.Repeat(TerrainType.Plain, width * height).ToArray();
+        SetRow(terrain, width, 0, TerrainType.Ridge);
+        SetRow(terrain, width, height - 1, TerrainType.Ridge);
+
+        for (var row = 1; row < height - 1; row++)
+        {
+            terrain[(row * width) + 6] = TerrainType.River;
+        }
+
+        foreach (var coord in new[]
+        {
+            new TileCoord(0, 4), new TileCoord(1, 4), new TileCoord(2, 4), new TileCoord(3, 4),
+            new TileCoord(4, 4), new TileCoord(5, 4), new TileCoord(6, 4), new TileCoord(7, 4),
+            new TileCoord(8, 4), new TileCoord(9, 4), new TileCoord(10, 4), new TileCoord(11, 4),
+            new TileCoord(12, 4), new TileCoord(13, 4), new TileCoord(3, 2), new TileCoord(4, 2),
+            new TileCoord(5, 2), new TileCoord(6, 2), new TileCoord(7, 2), new TileCoord(8, 2),
+            new TileCoord(9, 2), new TileCoord(10, 2), new TileCoord(11, 2), new TileCoord(12, 2),
+            new TileCoord(4, 6), new TileCoord(5, 6), new TileCoord(6, 6), new TileCoord(7, 6),
+            new TileCoord(8, 6), new TileCoord(9, 6), new TileCoord(10, 6), new TileCoord(11, 6)
+        })
+        {
+            terrain[(coord.Y * width) + coord.X] = TerrainType.Road;
+        }
+
+        foreach (var coord in new[]
+        {
+            new TileCoord(4, 1), new TileCoord(5, 1), new TileCoord(7, 3), new TileCoord(7, 5),
+            new TileCoord(8, 3), new TileCoord(9, 6), new TileCoord(11, 5)
+        })
+        {
+            terrain[(coord.Y * width) + coord.X] = TerrainType.Cover;
+        }
+
+        var playerHq = new TileCoord(0, 4);
+        var enemyHq = new TileCoord(13, 4);
+        var relay = new TileCoord(12, 2);
+        var fuel = new TileCoord(10, 6);
+        var workshop = new TileCoord(3, 6);
+        terrain[(playerHq.Y * width) + playerHq.X] = TerrainType.Hq;
+        terrain[(enemyHq.Y * width) + enemyHq.X] = TerrainType.Hq;
+        terrain[(relay.Y * width) + relay.X] = TerrainType.Hq;
+        terrain[(fuel.Y * width) + fuel.X] = TerrainType.Hq;
+        terrain[(workshop.Y * width) + workshop.X] = TerrainType.Workshop;
+
+        var state = new BattleState(width, height, terrain)
+        {
+            EnemyHq = enemyHq,
+            FuelCache = fuel,
+            InitialEnemyCount = 5,
+            MissionId = "mission2",
+            MissionTitle = "Inventory Adjustment",
+            PlayerHq = playerHq,
+            RandomSeed = 0x2026_0512_0002UL,
+            RelayStation = relay,
+            RequiresScoutSurvival = false,
+            ScoutId = "Scout-7",
+            ScoutRescued = true
+        };
+
+        state.Units.AddRange([
+            CreateUnit("Tech-1", Team.Player, UnitType.Infantry, new TileCoord(1, 2)),
+            CreateUnit("Tech-2", Team.Player, UnitType.Infantry, new TileCoord(1, 5)),
+            CreateUnit("Armor-1", Team.Player, UnitType.Armor, new TileCoord(2, 4)),
+            CreateUnit("Scout-7", Team.Player, UnitType.Scout, new TileCoord(2, 6), hp: 7),
+            CreateUnit("Engineer-1", Team.Player, UnitType.Engineer, new TileCoord(3, 5)),
+            CreateUnit("Relay-Guard", Team.Enemy, UnitType.Infantry, new TileCoord(11, 2), hp: 8),
+            CreateUnit("Fuel-Guard", Team.Enemy, UnitType.Armor, new TileCoord(10, 5), hp: 10),
+            CreateUnit("Sapper-A", Team.Enemy, UnitType.Sapper, new TileCoord(8, 2)),
+            CreateUnit("Sapper-B", Team.Enemy, UnitType.Sapper, new TileCoord(8, 6)),
+            CreateUnit("Road-Picket", Team.Enemy, UnitType.Infantry, new TileCoord(12, 4), hp: 8)
+        ]);
+
+        return state;
+    }
+
+    private static UnitState CreateUnit(string id, Team team, UnitType type, TileCoord position, int? hp = null)
+    {
+        var profile = BattleRules.GetProfile(type);
+        return new UnitState
+        {
+            Hp = hp ?? profile.MaxHp,
+            Id = id,
+            Position = position,
+            Team = team,
+            Type = type
+        };
+    }
+
+    private static void SetRow(TerrainType[] terrain, int width, int row, TerrainType type)
+    {
+        for (var column = 0; column < width; column++)
+        {
+            terrain[(row * width) + column] = type;
         }
     }
 }

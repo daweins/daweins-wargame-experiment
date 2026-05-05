@@ -73,6 +73,9 @@ The first role set is intentionally small:
   changes small enough to review.
 * Test Evaluator designs and runs verification, replay scenarios, regression
   checks, and quality gates.
+* Cruft Cleaner periodically finds unused code, art, prompt specs, and docs,
+  then moves confirmed cruft into `archive/cruft/` with evidence and restore
+  manifests.
 * Security Sentinel reviews secret handling, public-safety boundaries, tool
   access, dependency risk, and generated artifacts.
 * Steam Deck Integrator owns deployment workflow design, controller-first UX,
@@ -91,7 +94,8 @@ Copilot cloud-agent tasks after the repo is hosted. The orchestrator keeps state
 in repo work tracking files so repeated invocations behave like a durable loop.
 
 ```text
-Ingest -> Prioritize -> Delegate -> Implement -> Validate -> Critique -> Experiment -> Route Intervention -> Record -> Continue
+Ingest -> Prioritize -> Delegate -> Implement -> Validate -> Critique
+  -> Experiment -> Route Intervention -> Record -> Continue
 ```
 
 Each iteration should:
@@ -102,11 +106,13 @@ Each iteration should:
 4. Make focused safe changes without waiting for routine approval.
 5. Run the smallest meaningful checks.
 6. Ask adversarial and experiment agents to challenge the result.
-7. Record verification evidence, critique, experiment updates, and residual
+7. Run periodic cruft cleanup after several meaningful slices, before pull
+   request preparation, or after broad art-generation batches.
+8. Record verification evidence, critique, experiment updates, and residual
   risks.
-8. Log non-security human decisions in `human-intervention.md` and route around
+9. Log non-security human decisions in `human-intervention.md` and route around
   them when possible.
-9. Continue to the next useful safe action while invocation budget remains.
+10. Continue to the next useful safe action while invocation budget remains.
 
 ## Repo Work Tracking
 

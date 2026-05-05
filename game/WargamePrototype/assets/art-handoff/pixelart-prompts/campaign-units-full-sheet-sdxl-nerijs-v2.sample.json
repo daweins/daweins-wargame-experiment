@@ -1,0 +1,21 @@
+{
+  "name": "campaign-units-full-sheet-sdxl-nerijs-v2",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.75,
+  "loraStrengthClip": 0.75,
+  "prompt": "complete tactical game unit sprite roster sheet, 16-bit pixel art, orthographic three-quarter top-down camera, all units facing lower-right, consistent pixel scale, consistent thick dark one-pixel-style outline, large simple color regions, transparent-ready silhouettes on plain white background, no cast shadows, no floor plane, two horizontal rows of nine separated unit sprites, top row Kestrel research expedition units in blue-gray armor with teal sensor accents and tan field gear, bottom row Orison contractor military equivalents in charcoal gray with orange hazard accents, column order field tech infantry, utility armor rover, survey scout buggy, engineer with tool rig, sapper with breaching satchel, AT lancer with long shoulder geology laser, fast striker bike, field rig logistics truck with crates, siege breaker heavy vehicle, each unit centered in its own invisible 64x64 game tile with equal padding, readable at Steam Deck distance, no labels, no numbers, no grid lines",
+  "negativePrompt": "text, letters, numbers, labels, captions, watermark, logo, visible grid, UI card, menu frame, border, reference sheet labels, character portrait, anime closeup, photorealistic, 3d render, painterly lighting, dramatic perspective, side view, front portrait view, floor shadow, cast shadow, smoke, glow bloom, rim glow, tiny limbs, thin antennae, loose cables, cropped unit, cropped feet, overlapping units, extra rows, extra columns, inconsistent scale, blurry, low contrast, noisy dithering, environment, landscape, buildings",
+  "width": 1344,
+  "height": 768,
+  "steps": 26,
+  "cfg": 5.8,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 50000,
+  "candidateCount": 3,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/campaign-units-full-sheet-sdxl-nerijs-v2"
+}

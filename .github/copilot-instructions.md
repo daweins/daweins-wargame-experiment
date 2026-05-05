@@ -78,6 +78,18 @@ Prefer deterministic checks over opinion-only review. Run tests, linters,
 formatters, replay checks, build checks, and targeted simulations when they
 exist. If a check cannot be run, record why.
 
+Run periodic code review as part of autonomous work. Reviews are triggered by
+meaningful code slices, three to five completed autonomous slices, changes to
+core rules or architecture boundaries, dependency or security changes,
+generated artifacts, failed checks, pre-commit work, and pull request prep.
+Classify suggestions before fixing them. Autofix accepted bounded, local,
+public-safe, verifiable suggestions immediately; require independent acceptance
+for semantic gameplay, replay, save schema, dependency, security, or
+architecture changes. Do not create cosmetic churn from a no-issue review, and
+do not apply speculative cleanup unless it is accepted and tied to a concrete
+bug, risk, or simplification. Follow the project constitution in
+`docs/game/code-quality-architecture-constitution.md`.
+
 For the tactical combat game, favor deterministic simulation, command logs,
 seeded random number generation, controller-first UX, Steam Deck 1280x800
 validation, and fast laptop-to-Deck iteration.

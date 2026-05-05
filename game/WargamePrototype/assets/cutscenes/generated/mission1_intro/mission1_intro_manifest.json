@@ -1,0 +1,44 @@
+{
+  "cutscene_id": "mission1_intro",
+  "style_profile": "snes_gbds_hybrid_v1",
+  "format_version": "1.0",
+  "frame_width": 320,
+  "frame_height": 180,
+  "frames": [
+    {
+      "id": "01_camp_establishing",
+      "file": "01_camp_establishing.png",
+      "duration_ms": 1200
+    },
+    {
+      "id": "02_scout_alert_map",
+      "file": "02_scout_alert_map.png",
+      "duration_ms": 1100
+    },
+    {
+      "id": "03_relay_dropout_ridge",
+      "file": "03_relay_dropout_ridge.png",
+      "duration_ms": 1300
+    },
+    {
+      "id": "04_orison_column_approach",
+      "file": "04_orison_column_approach.png",
+      "duration_ms": 1200
+    },
+    {
+      "id": "05_hq_scramble",
+      "file": "05_hq_scramble.png",
+      "duration_ms": 1250
+    },
+    {
+      "id": "06_player_handoff",
+      "file": "06_player_handoff.png",
+      "duration_ms": 1500
+    }
+  ],
+  "sheet": {
+    "file": "mission1_intro_sheet.png",
+    "columns": 3,
+    "rows": 2
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "infantry-roster-sdxl-nerijs-v3",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.66,
+  "loraStrengthClip": 0.66,
+  "prompt": "eight separate upright tactical infantry sprites, 16-bit pixel art, pure white background, no floor, no shadow, no gray backdrop, orthographic three-quarter top-down camera, every soldier facing lower-right, same scale, same chunky pixel size, thick black outer contour, simple large color blocks, transparent-ready cutout silhouettes, Kestrel blue-gray uniforms with teal visor accents and tan field gear: field tech with compact survey pack, expedition engineer with square tool backpack and small repair arm, AT lancer with long shoulder geology laser, field sapper with teal-marked satchel; Orison charcoal uniforms with orange hazard accents: raider trooper, sabotage engineer with dark tool pack, breach sapper with orange satchel, breach lancer with angular anti-armor launcher, each sprite separated by empty white space with 20 percent padding, no labels, no grid, readable at 64x64",
+  "negativePrompt": "text, letters, numbers, labels, watermark, logo, UI card, border, visible grid, gray background, floor plane, cast shadow, drop shadow, road, terrain, landscape, buildings, vehicles, character portrait, anime closeup, multiple poses of same character, side view, front portrait view, dramatic perspective, photorealistic, 3d render, painterly, smooth blur, tiny limbs, thin weapons, antenna forest, loose cables, smoke, bloom, glow, cropped feet, overlapping soldiers, inconsistent scale, extra soldiers",
+  "width": 1152,
+  "height": 768,
+  "steps": 24,
+  "cfg": 5.6,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 52100,
+  "candidateCount": 2,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/infantry-roster-sdxl-nerijs-v3"
+}

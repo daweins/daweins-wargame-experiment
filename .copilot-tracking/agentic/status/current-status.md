@@ -2,7 +2,7 @@
 title: Current Development Status
 description: Latest human-readable summary of the autonomous development effort
 author: Development Status Reporter
-ms.date: 2026-05-02
+ms.date: 2026-05-04
 ms.topic: status
 ---
 
@@ -12,171 +12,161 @@ ms.topic: status
 
 ## Reporting Period
 
-Start: 2026-05-02
+Start: 2026-05-03 mission-design research pass
 
-Latest update: 2026-05-02
+Latest update: 2026-05-04 Request 10 Venn portrait runtime promotion
+
+Previous report:
+[reports/2026-05-03T19-46-10-7328784-04-00-current-status.md](reports/2026-05-03T19-46-10-7328784-04-00-current-status.md)
 
 ## Current Focus
 
-The current focus is improving the accepted first mission presentation. The
-latest manual request found the running board hard to read and called out the
-road tiles as a visual problem.
+The current focus is the art refresh pipeline quality bar. The latest pass
+promoted road, river, and bridge path art through a generated exact-topology
+runtime atlas, then used the local SDXL pipeline to refresh and promote a clean
+Venn commander portrait into runtime.
+
+G050 is ready to close after tracking cleanup. Request 11 now has runtime path
+art with QA pending. Request 08 has a two-row Kestrel and Orison runtime unit
+atlas in game.
 
 ## Time In Progress
 
-The effort is still in the same-day startup and first-prototype phase. Work has
-progressed from agentic workflow scaffolding and product direction into a local
-playable mission with deterministic checks and Godot startup validation.
-
-## Current State
-
-The repo now has a Copilot-only autonomous development scaffold with custom
-agents, prompt files, public-safe tracking files, a security model, a secret
-scanner, adversarial critique, experiment planning, and human intervention
-routing.
-
-The initial tactical combat product goal is defined: a near-future sci-fi,
-classic Advance Wars-centered tactics game with grounded humor, Godot C# as the
-preferred stack, AI-only play, CO powers, static HQ capture stakes, terrain,
-light logistics, 16-bit-era pixel art, minor seeded randomness, and no map
-editor or multiplayer.
-
-The first prototype mission is defined as a fixed-unit chokepoint HQ defense:
-hold the HQ, rescue or protect a stranded scout, defeat the remaining enemies,
-and show objective, speed, technique, power, and total score. The mission should
-target six to eight turns by design without a hard turn limit.
-
-The implementation now includes three working slices:
-
-* `src/Wargame.Core` provides the deterministic C# rules core.
-* `src/Wargame.SmokeTests` provides no-dependency smoke checks.
-* `game/WargamePrototype` provides the Godot 4.6 C# playable prototype.
-
-The Godot scene opens directly to the first mission. It renders a crisp
-16-bit-era pixel-art tactical board and supports movement, direct attacks,
-counterattacks, scout rescue, HQ defeat, enemy AI pressure, score categories,
-keyboard input, and gamepad-style input through the plain C# rules core. The
-latest tuning pass adds clearer rescue copy, stronger blue/red unit markers,
-distinct infantry/armor/scout silhouettes, explicit end-turn text, and a first
-enemy-phase grace rule for Scout-7. A follow-up pass adds a visible mode banner,
-contextual Enter/A instructions, and manual word wrapping so panel text stays
-inside the visible area. The latest pass adds unit type and HP labels on the
-board, cursor-panel combat stats, and an enemy phase recap for movement, damage,
-and destroyed units. The latest pass adds Esc/B move undo before acting,
-plain-language ATK/DEF/terrain explanation, and more distinct infantry, armor,
-and scout silhouettes. The AI proof pass adds a deterministic full-turn player
-planner, tunes first mission HP values, and prints a winning AI replay from the
-smoke runner. The latest scenario pass adds a second player infantry unit,
-expands the enemy patrol to five units, widens road and cover choices, and
-improves the infantry, armor, and scout sprite silhouettes. Manual feedback now
-accepts that expanded mission as the current first-mission baseline.
-
-The graphics pass keeps the same rules and mission but makes the scene more
-presentable with a framed battlefield, richer pixel-patterned terrain, clearer
-move and attack highlights, a stronger cursor, polished unit bases and HP bars,
-HUD section styling, and a more finished score panel.
-
-The latest visual pass moves the board to PNG sprite sheets. The Godot project
-now has terrain and unit sheets under `game/WargamePrototype/assets/sprites`,
-and `BattleController.cs` draws texture regions for tiles and infantry, armor,
-and scout frames while keeping the existing HUD, HP, badge, highlight, and
-cursor layers.
-
-The follow-up visual pass upgrades those sheets to native 64x64 generated
-assets with stronger silhouettes, outlines, texture, shading, and palette depth.
-The renderer now uses 64x64 source regions, and the user reviewed the result as
-much better.
-
-The latest readability pass keeps the same mission and rules while calming the
-terrain presentation. The road tile now renders as a full-tile dirt lane instead
-of a repeated diagonal strip, plains and ridges use quieter texture, the board
-grid is less dominant, units have a subtle backing plate, and the side-panel
-unit-shape legend wraps instead of clipping. The user inspected the running
-prototype and said this pass is looking much better.
-
-.NET 8 SDK/runtime is installed because Godot 4.6 C# requires the .NET 8
-runtime for script loading. Godot Engine .NET 4.6.2 is installed and verified.
-Existing terminal sessions may need to be restarted before the `godot` and
-`godot_console` aliases are available on `PATH`.
-
-The 16-bit-era pixel art direction is now captured in product and tracking
-artifacts so future visual work keeps the prototype crisp, readable, and aligned
-with the user's guidance.
+This was a focused art iteration and tracking pass completed on 2026-05-03. The
+broader autonomous development loop has been active across multiple 2026-05-02
+and 2026-05-03 passes covering the prototype, campaign planning, art pipeline,
+first-act campaign implementation, AI playtesting, quality gates, reversible
+cleanup hygiene, and local image generation.
 
 ## How Work Is Being Done
 
-The loop uses tracked files under `.copilot-tracking/agentic/` as its system of
-record. The Strategic Orchestrator reads those files, selects safe work,
-delegates to specialist agents, asks adversarial and experiment agents to apply
-pressure, records evidence, routes non-security human decisions to the
-intervention log, and continues useful work when possible.
+The pass used the repo-local C# asset tooling, local ComfyUI on localhost, and
+tracked prompt specs under the art-handoff folder. Generated candidate images
+remain under ignored `local-candidates/` folders. Tracking files now separate
+reference art, deterministic fallback, usable runtime source, and
+promotion-ready art.
 
-This pass favored repo-local deterministic evidence over opinion-only review:
-smoke tests, build checks, Godot headless startup, Markdown diagnostics, and a
-repo secret scan.
+## Current State
+
+* G050 Request 11 exact-topology autotile strategy is active.
+* May 4 incoming ChatGPT unit, terrain material, and prop sources were promoted
+  into runtime atlases.
+* `assets/sprites/art_units.png` now uses a two-row Kestrel/player and
+  Orison/enemy atlas.
+* `assets/sprites/art_terrain.png` now uses basin material plus cover, HQ,
+  ridge, and workshop prop art from the May 4 sources.
+* `assets/sprites/art_paths.png` now provides road, river, and bridge topology
+  art for runtime rendering.
+* `requests/10-missions-01-10-imagery-thread/local-venn-portrait-v3.png` is now
+  the preferred runtime commander portrait.
+* Request 11 returned-image topology remains unproven, but exact runtime
+  topology is now enforced by generated path atlas composition.
+* Request 11 mask-guided v3-v6, material composites, direct SDXL v7-v8, and
+  salvage compositor v2 were reviewed and rejected for promotion.
+* `terrain-masks` now generates flat masks and richer guide images for road and
+  river topology experiments.
+* `terrain-compose` and `terrain-salvage-road` can force exact horizontal road
+  topology from generated material or direct candidates, but the current output
+  is not good enough visually.
+* Art status now demotes requests 01, 02, 07, 09, 10, and 11 from vague
+  processed or fulfilled labels into clearer quality states.
+* G052 Periodic cruft cleaner agent is complete.
+* `.github/agents/cruft-cleaner.agent.md` defines archive-only cleanup with
+  evidence checks for code, Godot assets, art, prompt specs, and docs.
+* `.github/prompts/cruft-cleaner-periodic.prompt.md` provides a bounded periodic
+  entry point with `scope` and `move` inputs.
+* `archive/cruft/README.md` defines dated archive layout, manifest contents,
+  restore pattern, and skip rules.
+* The Strategic Orchestrator now has a Cruft Cleanup handoff and periodic
+  hygiene step after several autonomous slices, before pull request prep, or
+  after broad art-generation batches.
+* G047 Mission and campaign design rubric is complete.
+* `docs/game/mission-campaign-design-rubric.md` now defines criteria for good
+  missions, bad mission anti-patterns, good and bad campaign progression,
+  automated evidence, manual review questions, and promotion gates.
+* G048 Missions 1-10 variance matrix and quality review is ready.
+* C013 records the risk that a playable first-act campaign can masquerade as a
+  good campaign if completion is treated as the main quality signal.
+* E012 proposes a mission quality fingerprint experiment that compares mission
+  intent, deterministic playtest evidence, scoring, objective pressure, and
+  readability risk.
 
 ## What Has Worked Well
 
-* The project now has explicit public-safety rules and a repo scanner.
-* Work state is tracked in repo files instead of only in chat.
-* Human guidance and human intervention are separated, which keeps feedback
-  lightweight while still capturing decisions that need attention.
-* The autonomy model now halts only for security-sensitive issues or when no
-  useful work remains.
-* The product target is specific enough to drive implementation without another
-  design interrogation pass.
-* The first prototype target is now small enough for focused C# rules work.
-* The first Godot C# prototype builds, smoke-runs, and has deterministic rules
-  checks.
-* The visual direction now calls for crisp 16-bit pixel art rather than
-  high-resolution or vector-style placeholders.
-* The first mission no longer relies on procedural rectangle art for terrain and
-  unit frames.
-* The current sprite sheets are reproducible through a repo-local generator,
-  which keeps visual iteration inspectable instead of hidden in chat output.
-* The Godot scene now opens directly to the first mission, reducing friction for
-  the user's trial playthrough.
+* The project now has a stronger guardrail against false progress: AI-vs-AI
+  campaign completion is explicitly not treated as proof that missions are fun,
+  strategic, varied, fair, or readable.
+* The art ledger now has a stronger guardrail against false readiness:
+  processed, hooked up, fallback present, and good art are separate states.
+* Direct SDXL was useful as a texture reference, while deterministic composition
+  was useful for exact topology. Neither alone has cleared the request 11 bar.
+* Cleanup is now reversible by design: the cleaner records evidence and restore
+  guidance instead of deleting files.
+* The rubric gives future mission work concrete gates: tactical thesis,
+  objective pressure, meaningful plan space, terrain value, AI pressure, score
+  spread, replay evidence, and Steam Deck readability.
+* G048 provides a clean next step instead of letting the campaign expand on
+  vibes alone.
 
 ## Verification Evidence
 
+* `git diff --check` produced no output.
+* VS Code diagnostics found no issues in touched C#, JSON, and Markdown files.
+* `candidate-review` generated
+  `game/WargamePrototype/assets/art-handoff/local-review/incoming-may4-single-sources/candidate-board-readability.png`.
+* `dotnet build .\src\Wargame.AssetTools\Wargame.AssetTools.csproj` succeeds.
+* `dotnet build .\game\WargamePrototype\WargamePrototype.csproj` succeeds.
 * `dotnet run --project .\src\Wargame.SmokeTests\Wargame.SmokeTests.csproj`
-  passes 10 checks and prints a winning first mission AI replay.
-* `dotnet build .\game\WargamePrototype\WargamePrototype.sln` succeeds.
-* Godot headless startup with `--path .\game\WargamePrototype --quit-after 2`
-  succeeds.
-* `python -m py_compile .\scripts\assets\generate_prototype_sprites.py`
-  succeeds.
-* VS Code diagnostics report no errors for `BattleController.cs` and
-  `generate_prototype_sprites.py` after the readability pass.
-* Markdown diagnostics are clean.
-* The repo secret scan passes.
+  passes 23 smoke checks.
+* `extract-art` regenerated `art_terrain.png`, `art_units.png`, and
+  `art_ui_icons.png` from the source-art extraction manifest, and generated
+  `art_paths.png` from May 4 source materials.
+* `terrain-path-review` generated path atlas, board, and bridge review images.
+* `candidate-review` generated a request 10 Venn portrait refresh review packet.
+* Godot build passed after the portrait runtime update.
+* Smoke tests passed with 23 checks after the portrait runtime update.
+* New and retried JSON specs parse successfully with `ConvertFrom-Json`.
+* ComfyUI returned HTTP 200 before generation runs and after restart.
+* Security status: passed. No secrets, private device details, ignored logs, or
+  remote operations were touched.
+
+## Image Evidence
+
+New incoming source evidence is recorded in request 07, request 08, request 11,
+and the art status ledger. The first board-scale proof shows both Field Tech
+single-source images remain readable at 64x64, while the horizontal road source
+needs terrain-specific 32px topology review instead of generic token scaling.
 
 ## Challenges And Risks
 
-* True continuous execution still depends on repeated Copilot prompt invocations
-  or future cloud-agent tasks.
-* The reporting cadence is implemented as an orchestration rule, not an external
-  wall-clock scheduler.
-* The mission is now accepted as a good tactical first mission, and the richer
-  64x64 sprite-sheet visual pass has positive manual feedback. It still needs
-  screenshot validation, controller polish, and broader systems work.
-* The prototype still needs 1280x800 screenshot and readability evidence for
-  Steam Deck-oriented validation.
-* Unit placement, AI pressure, scoring, UI copy, and controller feel may need
-  tuning after the first playthrough.
-* Minor randomness must be handled carefully so forecasts stay honest and
-  replays stay deterministic.
+* C013 remains open: the playable first-act campaign can still masquerade as a
+  good campaign.
+* Missions 4-10 especially need review for false variety, overloaded mechanics,
+  one-route solutions, objective labels that do not change play, or maps that
+  complete deterministically but lack interesting decisions.
+* The next review needs to compare authored mission intent against deterministic
+  playtest evidence and manual design criteria. AI completion should remain
+  supporting evidence, not the main quality signal.
+* Future cruft cleanup needs real evidence before moving files. Uncertain
+  candidates should stay in place or be routed for human judgment.
+* Request 11 remains unresolved. The new incoming sources improve material and
+  palette quality, but exact edge-center topology still needs proof.
+* ComfyUI hit a CUDA illegal memory access during direct v7 generation. The
+  server was restarted successfully, and the smaller 512px v8 run completed,
+  but the outputs were still rejected.
 
 ## Human Intervention Items
 
-No open non-security human intervention items are currently recorded. The next
-human action is the manual first-mission trial playthrough, while autonomous
-work can continue on screenshot evidence and tuning support.
+* `HI004` is closed for the current runtime promotion because the May 4 returned
+  source sheets were enough to assemble and promote `art_units.png`.
+* `HI001` remains open: the sidebar-covered 1280x800 arena readability playtest
+  is still pending.
+* Neither item blocks request 11 experimentation or G048. Useful autonomous work
+  can continue safely.
 
 ## Next Useful Autonomous Work
 
-1. Add screenshot-based 1280x800 readability evidence for the pixel-art board.
-2. Start the next tactical system slice: replay command logging, capture
-  economy, or light supply.
-3. Validate and tune controller-first interaction details after the next play
-  pass.
+Capture 1280x800 in-game screenshots for promoted unit, terrain, path, and
+portrait art. If those screenshots reveal remaining art gaps that cannot be
+fixed by local extraction, composition, or SDXL/img2img, prepare the next focused
+ChatGPT prompt list.

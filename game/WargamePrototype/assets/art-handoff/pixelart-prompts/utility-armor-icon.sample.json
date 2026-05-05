@@ -1,0 +1,18 @@
+{
+  "name": "utility-armor-icon",
+  "model": "v1-5-pruned-emaonly.safetensors",
+  "prompt": "one tiny 64x64 style pixel art game unit icon enlarged to 256x256, isolated Kestrel Utility Armor armored vehicle, single object only, centered, three-quarter top-down tactical view, squat rectangular wheeled carrier, broad wedge front, short low turret, blue-gray hull, cyan sensor slit, tan side panels, crisp dark outline, flat light gray background, no UI frame, no label, no sheet, no extra views, no people, no terrain",
+  "negativePrompt": "multiple sprites, sprite sheet, character sheet, concept sheet, UI card, label, caption, text, numbers, border, grid, blueprint, diagram, scene, map, tilemap, road, grass, building, soldier, person, robot, mech, spaceship, photorealistic, 3d render, painterly, smooth gradients, realistic lighting, cropped, noisy background, excessive detail",
+  "width": 256,
+  "height": 256,
+  "steps": 22,
+  "cfg": 6.5,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 44100,
+  "candidateCount": 4,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/utility-armor-icon"
+}

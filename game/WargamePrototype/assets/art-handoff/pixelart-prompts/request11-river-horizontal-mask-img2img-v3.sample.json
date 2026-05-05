@@ -1,0 +1,23 @@
+{
+  "name": "request11-river-horizontal-mask-img2img-v3",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.42,
+  "loraStrengthClip": 0.42,
+  "sourceImage": "game/WargamePrototype/assets/art-handoff/local-candidates/request11-topology-masks-v1/river-horizontal-mask.png",
+  "denoise": 0.46,
+  "prompt": "redraw the source mask as one extractor-friendly top-down tactical river terrain tile, one square tile only, flat overhead view, dry basin ground with one horizontal blue industrial runoff river entering exactly at left and right edge centers, dark simple banks, preserve the source river topology and edge connections, crisp 16-bit tactical pixel art, limited palette, low noise, no perspective, no buildings, no labels, readable when downsampled to 32x32",
+  "negativePrompt": "building, roof, room, interior, facility, floor plan, map scene, city canal map, white grid lines, architecture plan, multiple tiles, tile sheet, labels, text, numbers, UI frame, card, perspective, isometric, horizon, vehicles, characters, bridge, road, photorealistic, 3d render, painterly, excessive waves, missing edge connections, mismatched river width",
+  "width": 768,
+  "height": 768,
+  "steps": 24,
+  "cfg": 4.4,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 61400,
+  "candidateCount": 2,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/request11-river-horizontal-mask-img2img-v3"
+}

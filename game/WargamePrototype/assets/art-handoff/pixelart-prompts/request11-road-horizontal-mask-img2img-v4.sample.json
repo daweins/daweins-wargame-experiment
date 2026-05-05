@@ -1,0 +1,23 @@
+{
+  "name": "request11-road-horizontal-mask-img2img-v4",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.52,
+  "loraStrengthClip": 0.52,
+  "sourceImage": "game/WargamePrototype/assets/art-handoff/local-candidates/request11-topology-masks-v1/road-horizontal-mask.png",
+  "denoise": 0.72,
+  "prompt": "use the source only as a topology guide and redraw it into finished terrain art, one square top-down tactical board tile only, flat overhead pixel art, dusty ochre basin ground with small pebbles and subtle scrub texture, one horizontal cracked compacted service road crossing the exact center from left edge to right edge, road edges align exactly with the source mask and enter at the center of both side edges, darker tire-worn middle, chipped shoulders, 16-bit tactical terrain tile, crisp low-noise pixel texture, readable when downsampled to 32x32, no flat color mask, no placeholder art",
+  "negativePrompt": "flat mask, unchanged source, plain rectangle, solid color bands, empty beige field, blank road, building, roof, room, interior, facility, floor plan, map scene, city block, parking lot, white grid lines, architecture plan, multiple tiles, tile sheet, labels, text, numbers, UI frame, card, perspective, isometric, horizon, vehicles, characters, photorealistic, 3d render, painterly blur, excessive texture, missing edge connections, mismatched road width",
+  "width": 768,
+  "height": 768,
+  "steps": 30,
+  "cfg": 5.2,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 61320,
+  "candidateCount": 4,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/request11-road-horizontal-mask-img2img-v4"
+}

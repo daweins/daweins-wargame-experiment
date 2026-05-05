@@ -21,9 +21,15 @@ argument-hint: "[period=current|daily|since-last] [audience=human]"
    project is working on, how long the effort has been underway, how work is
    being done, what has worked well, where challenges have appeared, open human
    intervention items, and next useful autonomous work.
-3. Update `.copilot-tracking/agentic/status/current-status.md`.
-4. Update reporting metadata in `reporting-cadence.md` using public-safe values.
-5. Do not include secrets, credentials, private device details, private local
-   paths, or raw logs.
+3. Before replacing `current-status.md`, archive the outgoing report under
+   `.copilot-tracking/agentic/status/reports/` using a filename-safe timestamp.
+4. Update `.copilot-tracking/agentic/status/current-status.md` with the latest
+   report and a full ISO 8601 timestamp with offset.
+5. Update reporting metadata in `reporting-cadence.md` using public-safe values,
+   including the full timestamp and archive path.
+6. Include public-safe repo-local image evidence when useful, especially
+   screenshots from visual, UI, Steam Deck, or readability validation passes.
+7. Do not include secrets, credentials, private device details, private local
+   paths, raw logs, or screenshots that reveal sensitive machine state.
 
 If a security issue is discovered, stop and report only the class and location.

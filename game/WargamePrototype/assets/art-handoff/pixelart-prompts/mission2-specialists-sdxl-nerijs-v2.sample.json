@@ -1,0 +1,21 @@
+{
+  "name": "mission2-specialists-sdxl-nerijs-v2",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.72,
+  "loraStrengthClip": 0.72,
+  "prompt": "four separated tactical game unit sprites for mission 2 specialists, 16-bit pixel art, orthographic three-quarter top-down camera, all facing lower-right, consistent pixel scale with mission 1 sprites, thick dark one-pixel-style outline, large simple color regions, transparent-ready silhouettes on plain white background, no cast shadows, no floor plane, Kestrel expedition engineer upright support unit with square tool backpack and small repair arm, Kestrel field rig compact logistics truck with crates and small crane, Orison breach sapper fragile infantry with orange breaching satchel and hazard stripe, Orison sabotage engineer with dark tool pack and orange cable spool, each unit centered with 15 percent padding, readable after downscaling to 64x64, no labels, no grid",
+  "negativePrompt": "text, letters, numbers, labels, captions, watermark, logo, visible grid, UI card, menu frame, border, reference sheet labels, multiple poses, character portrait, photorealistic, 3d render, painterly, dramatic perspective, side view, floor plane, cast shadow, smoke, glow bloom, tiny limbs, thin antennae, loose cables, cropped unit, overlapping units, inconsistent scale, blurry, noisy dithering, environment, road, buildings",
+  "width": 1024,
+  "height": 768,
+  "steps": 26,
+  "cfg": 5.8,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 50200,
+  "candidateCount": 3,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/mission2-specialists-sdxl-nerijs-v2"
+}

@@ -1,0 +1,21 @@
+{
+  "name": "request11-river-tiles-2x2-sdxl-nerijs-v2",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.45,
+  "loraStrengthClip": 0.45,
+  "prompt": "four separate extractor-friendly top-down river terrain tiles only, 2 by 2 grid with wide empty gutters, each tile is one square tactical board tile on dry basin ground, impassable blue industrial runoff water with simple dark banks, flat overhead view, no perspective, tile 1 horizontal river entering exactly at left and right edge centers, tile 2 vertical river entering exactly at top and bottom edge centers, tile 3 simple 90 degree river corner entering top and right edge centers, tile 4 simple 4-way water junction entering all four edge centers, crisp 16-bit tactical pixel art, limited palette, low noise, consistent river width, readable at 32x32",
+  "negativePrompt": "building, roof, interior, facility, floor plan, room grid, pool room, canal city map, white grid lines, architecture plan, large gray panel, labels, text, numbers, UI frame, card, perspective, isometric, horizon, vehicles, characters, bridge, road, photorealistic, 3d render, painterly, excessive waves, tiny noise, missing edge connections, mismatched river width",
+  "width": 768,
+  "height": 768,
+  "steps": 24,
+  "cfg": 4.6,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 61200,
+  "candidateCount": 2,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/request11-river-tiles-2x2-sdxl-nerijs-v2"
+}

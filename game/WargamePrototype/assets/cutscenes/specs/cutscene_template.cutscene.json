@@ -1,0 +1,38 @@
+{
+  "format_version": "1.0",
+  "cutscene_id": "template_cutscene",
+  "style_profile": "snes_gbds_hybrid_v1",
+  "resolution": {
+    "width": 320,
+    "height": 180
+  },
+  "sheet": {
+    "columns": 3
+  },
+  "palette": {
+    "sky_dark": [20, 34, 68, 255],
+    "sky_mid": [41, 68, 111, 255],
+    "ground_dark": [33, 40, 52, 255],
+    "ground_mid": [58, 68, 83, 255],
+    "accent": [209, 90, 78, 255],
+    "ui": [94, 172, 220, 255]
+  },
+  "frames": [
+    {
+      "id": "01_opening",
+      "duration_ms": 1200,
+      "background": "sky_dark",
+      "layers": [
+        { "op": "rect", "x": 0, "y": 0, "width": 320, "height": 94, "color": "sky_mid" },
+        { "op": "rect", "x": 0, "y": 94, "width": 320, "height": 86, "color": "ground_dark" },
+        {
+          "op": "polygon",
+          "points": [[0, 126], [62, 94], [130, 120], [196, 88], [256, 116], [320, 96], [320, 180], [0, 180]],
+          "color": "ground_mid"
+        },
+        { "op": "ellipse", "x": 244, "y": 88, "radius_x": 12, "radius_y": 7, "color": "accent" },
+        { "op": "dither", "x": 0, "y": 90, "width": 320, "height": 90, "color_a": "ui", "color_b": "ground_dark", "step": 11 }
+      ]
+    }
+  ]
+}

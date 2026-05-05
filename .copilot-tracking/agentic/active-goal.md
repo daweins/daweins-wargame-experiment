@@ -14,9 +14,14 @@ that objective with minimal human blocking.
 
 ## Product Direction
 
-The first product direction is a near-future sci-fi tactical combat game that
-leans closest to classic Advance Wars. It should run on this laptop and be
-testable on Steam Deck without Steam Store publication.
+The first product direction is a realistic near-future sci-fi tactical combat
+game that leans closest to classic Advance Wars. It should favor grounded
+political and industrial conflict over weird macguffins, and it should run on
+this laptop and be testable on Steam Deck without Steam Store publication.
+Interstellar politics should use slow physical travel plus constrained FTL
+messaging: ships, cargo, fuel, and armies move through scheduled transit
+infrastructure, while fixed Spindle Net stations carry low-bandwidth audited
+orders, sanctions, and evidence packets.
 
 The game should use Godot 4.x with C# if practical. It should focus on
 controller-first 20 to 40 minute single-player battles against AI, with CO

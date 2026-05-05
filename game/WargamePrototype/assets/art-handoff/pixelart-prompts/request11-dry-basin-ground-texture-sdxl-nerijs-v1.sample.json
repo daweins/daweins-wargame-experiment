@@ -1,0 +1,21 @@
+{
+  "name": "request11-dry-basin-ground-texture-sdxl-nerijs-v1",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.5,
+  "loraStrengthClip": 0.5,
+  "prompt": "seamless-looking top-down 16-bit pixel art dry ochre battlefield ground texture only, no roads, no rivers, no buildings, small pebbles, sparse dry scrub flecks, subtle tactical board terrain texture, low contrast, clean readable material, fills the whole square, no horizon, no perspective, no tile border, no labels",
+  "negativePrompt": "road, river, water, canal, building, room, wall, roof, floor plan, map, large objects, characters, vehicles, grid, tile sheet, border, frame, card, labels, text, numbers, photorealistic, 3d render, painterly blur, strong shadows, high contrast clutter",
+  "width": 768,
+  "height": 768,
+  "steps": 26,
+  "cfg": 4.8,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 61500,
+  "candidateCount": 2,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/request11-dry-basin-ground-texture-sdxl-nerijs-v1"
+}

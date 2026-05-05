@@ -1,0 +1,18 @@
+{
+  "name": "field-tech-retro",
+  "model": "v1-5-pruned-emaonly.safetensors",
+  "prompt": "retro 16-bit console game sprite, tiny pixel art tactical unit, one blue-gray sci-fi infantry token, simple chibi field technician, centered full body, isolated, plain white background, orthographic three-quarter top-down game view, 64x64 readable silhouette, chunky square pixels, dark one-pixel outline, flat colors, cyan visor pixel, square backpack pixels, short sturdy proportions, no realistic person, no photograph, no 3d model, no scene, no UI",
+  "negativePrompt": "photograph, realistic human, portrait, real backpack, product photo, 3d render, blender, octane, unreal engine, building, landscape, road, grass, room, squad, crowd, robot, fantasy armor, sprite sheet, multiple poses, UI card, frame, border, label, caption, text, logo, watermark, smooth gradients, realistic lighting, detailed fabric, cropped, blurry",
+  "width": 512,
+  "height": 512,
+  "steps": 24,
+  "cfg": 8.0,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 46000,
+  "candidateCount": 4,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/field-tech-retro"
+}

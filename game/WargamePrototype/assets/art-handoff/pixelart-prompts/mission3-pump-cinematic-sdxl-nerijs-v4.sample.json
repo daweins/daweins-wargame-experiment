@@ -1,0 +1,21 @@
+{
+  "name": "mission3-pump-cinematic-sdxl-nerijs-v4",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.62,
+  "loraStrengthClip": 0.62,
+  "prompt": "widescreen 16-bit pixel art cinematic illustration, eye-level camera, visible horizon, not top-down, not isometric, Pump Station Three in a dry basin utility corridor, long pipe bridge crossing behind concrete service pads, coolant tanks and pressure monitor lights, patched Kestrel survey crawler convoy staged near the access road, subtle teal Asterite residue in filter vents, distant orange Orison hazard markers, grounded near-future industrial sci-fi, readable mission-briefing backdrop, open lower-left foreground reserved for dialogue panel, no text, no UI, no logo",
+  "negativePrompt": "top-down view, overhead map, isometric map, tilemap, asset sheet, sprite sheet, separate props, inventory icons, orthographic object sheet, labels, text, letters, numbers, logo, watermark, UI frame, speech bubble, photorealistic, 3d render, painterly oil painting, anime closeup, fantasy, magic, alien temple, modern city skyline, cluttered lower-left foreground, blurry, low contrast, overexposed, distorted pipes, noisy tiny details",
+  "width": 1024,
+  "height": 576,
+  "steps": 28,
+  "cfg": 6.2,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 55300,
+  "candidateCount": 1,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/mission3-pump-cinematic-sdxl-nerijs-v4"
+}

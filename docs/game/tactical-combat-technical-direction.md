@@ -12,11 +12,16 @@ The target game is a 2D, turn-based tactical combat game inspired most directly
 by classic Advance Wars. It should be comfortable on a laptop and on Steam Deck,
 with controller support as a first-class input model.
 
-The initial product goal is a near-future sci-fi army tactics game with grounded
-humor, 20 to 40 minute missions, AI-only opponents, CO powers, static HQ stakes,
-terrain, light logistics, light within-mission veterancy, 16-bit-era pixel art,
-and minor seeded randomness. Combat should remain mostly skill-weighted and
-replayable.
+The initial product goal is a realistic near-future sci-fi army tactics game
+with grounded political conflict, dry humor, 20 to 40 minute missions, AI-only
+opponents, CO powers, static HQ stakes, terrain, light logistics, light
+within-mission veterancy, 16-bit-era pixel art, and minor seeded randomness.
+Combat should remain mostly skill-weighted and replayable.
+
+Universe-scale politics should preserve slow material logistics. FTL messaging
+can exist as fixed, low-bandwidth, audited Spindle Net infrastructure for
+orders, sanctions, and evidence custody, but there is no FTL travel for units,
+cargo, reinforcements, fuel, or rescue.
 
 The game should not pursue multiplayer, a map editor, weather systems, or Fire
 Emblem-style named-unit attachment. Campaign progression may unlock or improve
@@ -69,6 +74,9 @@ settings, and camera scale rules that avoid blurry scaling at 1280x800. Use
 placeholder assets only when they still match the pixel-art direction.
 
 ## Architecture Direction
+
+Follow the project quality and architecture constitution in
+[Code Quality And Architecture Constitution](code-quality-architecture-constitution.md).
 
 Keep the rules model deterministic and replayable:
 

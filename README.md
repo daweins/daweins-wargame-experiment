@@ -52,9 +52,12 @@ continues other useful work. Security-sensitive issues still halt the loop.
 Use `/human-intervention-list`, `/human-intervention-discuss`, and
 `/human-intervention-act` to review, discuss, and resolve intervention items.
 
-The Development Status Reporter periodically refreshes
-`.copilot-tracking/agentic/status/current-status.md`. Use
-`/development-status-report` when you want an immediate human-readable summary.
+The Development Status Reporter refreshes
+`.copilot-tracking/agentic/status/current-status.md` at least every 30 minutes
+while active changes are underway. It keeps timestamped old reports under
+`.copilot-tracking/agentic/status/reports/` and may link public-safe screenshots
+or other image evidence. Use `/development-status-report` when you want an
+immediate human-readable summary.
 
 GitHub Copilot cloud agent can be used for branch and pull request work after
 the repo is hosted on GitHub, but it must not receive access to secrets unless

@@ -39,7 +39,8 @@ argument-hint: "[objective=active-goal] [maxSlices=auto] [guidance=...]"
 10. Update state, backlog, development log, critiques, experiments, decisions,
    metrics, and human intervention items with public-safe changes and evidence.
 11. Ask Development Status Reporter to refresh the current status report when
-   reporting cadence is due or meaningful tracking state changed.
+   reporting cadence is due, at least every 30 minutes during active changes,
+   or when meaningful tracking state changed.
 12. Continue to the next useful safe item while budget remains and `maxSlices`
    allows it.
 

@@ -1,0 +1,21 @@
+{
+  "name": "mission1-rescue-cinematic-sdxl-nerijs-v4",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.62,
+  "loraStrengthClip": 0.62,
+  "prompt": "widescreen 16-bit pixel art cinematic illustration, eye-level camera, visible horizon, not top-down, not isometric, Scout-7's damaged survey crawler stopped beside a restricted seam marker in a dusty basin, small sample crates near the crawler, faint teal Asterite flecks in cracked rocks, camp floodlights distant beyond basalt ridges, blue-gray Kestrel panels and cyan sensor slit on the crawler, grounded near-future industrial sci-fi, tense rescue aftermath, open lower-left foreground reserved for dialogue panel, no text, no UI, no logo",
+  "negativePrompt": "top-down view, overhead map, isometric map, tilemap, asset sheet, sprite sheet, separate props, inventory icons, orthographic object sheet, labels, text, letters, numbers, logo, watermark, UI frame, speech bubble, photorealistic, 3d render, painterly oil painting, anime closeup, fantasy, magic, alien ruins, modern city skyline, cluttered lower-left foreground, blurry, low contrast, overexposed, distorted crawler, noisy tiny details",
+  "width": 1024,
+  "height": 576,
+  "steps": 28,
+  "cfg": 6.2,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 55100,
+  "candidateCount": 1,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/mission1-rescue-cinematic-sdxl-nerijs-v4"
+}

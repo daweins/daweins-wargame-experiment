@@ -18,9 +18,14 @@ in the repo.
 * [current-status.md](current-status.md) is the latest status report.
 * [reporting-cadence.md](reporting-cadence.md) defines when the Development
   Status Reporter should refresh the report.
+* `reports/` keeps timestamped historical reports before the latest report is
+  replaced.
+* `images/` can store public-safe screenshots or other image evidence linked by
+  reports.
 
 ## Reporting Agent
 
 The assigned reporting agent is `Development Status Reporter`. The Strategic
-Orchestrator should call that agent periodically during autonomous work and when
-the human invokes `/development-status-report`.
+Orchestrator should call that agent at least every 30 minutes while active
+changes are underway, after meaningful tracking changes, and when the human
+invokes `/development-status-report`.

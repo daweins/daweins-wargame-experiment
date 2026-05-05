@@ -1,0 +1,23 @@
+{
+  "name": "request08-kestrel-survey-scout-img2img-v2",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.64,
+  "loraStrengthClip": 0.64,
+  "sourceImage": "game/WargamePrototype/assets/art-handoff/local-candidates/request08-kestrel-survey-scout-sdxl-nerijs-v1/request08-kestrel-survey-scout-sdxl-nerijs-v1_58300_00001_.png",
+  "denoise": 0.42,
+  "prompt": "redraw the source shape as one complete Kestrel survey scout buggy board sprite, single vehicle only, 16-bit tactical pixel art, orthographic three-quarter top-down camera, facing lower-right, low compact four-wheel recon buggy, blue-gray body, tan side panels, integrated teal nose sensor strip, lower and narrower than utility armor, no weapon, no long antenna, centered full vehicle visible, fills most of the square crop, flat pure magenta background for extraction, no floor, no shadow, no extra views, no card, no sheet, thick dark outline, limited palette, crisp pixels, readable when cropped to 64x64 over busy terrain",
+  "negativePrompt": "multiple vehicles, second vehicle, view sheet, roster sheet, sprite sheet, side elevation, front elevation, labels, text, letters, numbers, watermark, UI card, border, frame, beige background, white background, gray background, scenic background, road, terrain, floor, room, garage, hangar, building, source-card composition, long pole, sword, lance, cannon barrel, antenna boom, mast, motorcycle, aircraft, tank, tiny vehicle, cropped wheels, detached wheels, inconsistent scale, photorealistic, 3d render, painterly, soft blur, bloom, glow, smoke, cast shadow, drop shadow, noisy ground",
+  "width": 768,
+  "height": 768,
+  "steps": 26,
+  "cfg": 5.2,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 58500,
+  "candidateCount": 2,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/request08-kestrel-survey-scout-img2img-v2"
+}

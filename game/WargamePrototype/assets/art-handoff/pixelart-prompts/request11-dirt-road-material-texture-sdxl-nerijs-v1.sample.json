@@ -1,0 +1,21 @@
+{
+  "name": "request11-dirt-road-material-texture-sdxl-nerijs-v1",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.5,
+  "loraStrengthClip": 0.5,
+  "prompt": "top-down 16-bit pixel art dusty dirt service road material texture only, compacted tan-gray dirt, tire-worn streaks, chipped gravel, small cracks, low contrast tactical board material, fills the whole square with road surface texture, no road shape, no lane markings, no buildings, no water, no horizon, no tile border, no labels",
+  "negativePrompt": "full road tile, horizon road, highway, lane markings, asphalt stripe, water, canal, river, building, room, wall, roof, floor plan, map, characters, vehicles, grid, tile sheet, border, frame, card, labels, text, numbers, photorealistic, 3d render, painterly blur, strong shadows, high contrast clutter",
+  "width": 768,
+  "height": 768,
+  "steps": 26,
+  "cfg": 4.8,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 61600,
+  "candidateCount": 2,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/request11-dirt-road-material-texture-sdxl-nerijs-v1"
+}

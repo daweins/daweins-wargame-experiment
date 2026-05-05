@@ -1,0 +1,70 @@
+{
+  "outputs": [
+    {
+      "output": "sprites/art_terrain.png",
+      "source": "art-handoff/incoming/ChatGPT Image May 4, 2026, 02_22_26 PM.png",
+      "sprite_size": 64,
+      "columns": 12,
+      "sprites": [
+        { "name": "plain_a", "region": { "x": 0, "y": 0, "width": 443, "height": 443 }, "fit": "cover" },
+        { "name": "plain_b", "region": { "x": 443, "y": 0, "width": 444, "height": 443 }, "fit": "cover" },
+        { "name": "cover_crates", "source": "art-handoff/incoming/ChatGPT Image May 4, 2026, 02_26_02 PM.png", "region": { "x": 0, "y": 0, "width": 384, "height": 256 }, "fit": "contain", "alpha": { "mode": "corner", "tolerance": 80 } },
+        { "name": "hq_prefab", "source": "art-handoff/incoming/ChatGPT Image May 4, 2026, 02_26_02 PM.png", "region": { "x": 0, "y": 256, "width": 384, "height": 256 }, "fit": "contain", "alpha": { "mode": "corner", "tolerance": 80 } },
+        { "name": "ridge_basalt", "source": "art-handoff/incoming/ChatGPT Image May 4, 2026, 02_26_02 PM.png", "region": { "x": 768, "y": 0, "width": 384, "height": 256 }, "fit": "contain", "alpha": { "mode": "corner", "tolerance": 80 } },
+        { "name": "plain_c", "region": { "x": 887, "y": 0, "width": 443, "height": 443 }, "fit": "cover" },
+        { "name": "plain_d", "region": { "x": 1330, "y": 0, "width": 444, "height": 443 }, "fit": "cover" },
+        { "name": "plain_e", "region": { "x": 0, "y": 443, "width": 443, "height": 444 }, "fit": "cover" },
+        { "name": "plain_f", "region": { "x": 443, "y": 443, "width": 444, "height": 444 }, "fit": "cover" },
+        { "name": "road_material_reference", "region": { "x": 1330, "y": 443, "width": 444, "height": 444 }, "fit": "cover" },
+        { "name": "cover_ridge_broken", "source": "art-handoff/incoming/ChatGPT Image May 4, 2026, 02_26_02 PM.png", "region": { "x": 1152, "y": 0, "width": 384, "height": 256 }, "fit": "contain", "alpha": { "mode": "corner", "tolerance": 80 } },
+        { "name": "workshop_fabricator", "source": "art-handoff/incoming/ChatGPT Image May 4, 2026, 02_26_02 PM.png", "region": { "x": 0, "y": 512, "width": 384, "height": 256 }, "fit": "contain", "alpha": { "mode": "corner", "tolerance": 80 } }
+      ]
+    },
+    {
+      "output": "sprites/art_units.png",
+      "source": "art-handoff/incoming/ChatGPT Image May 4, 2026, 02_09_42 PM.png",
+      "sprite_size": 64,
+      "columns": 9,
+      "sprites": [
+        { "name": "kestrel_infantry", "source": "art-handoff/incoming/ChatGPT Image May 4, 2026, 02_09_34 PM.png", "region": { "x": 0, "y": 0, "width": 1254, "height": 1254 }, "fit": "contain", "alpha": { "mode": "corner", "tolerance": 80 } },
+        { "name": "kestrel_armor", "region": { "x": 0, "y": 0, "width": 591, "height": 443 }, "fit": "contain", "alpha": { "mode": "corner", "tolerance": 80 } },
+        { "name": "kestrel_scout", "region": { "x": 591, "y": 0, "width": 592, "height": 443 }, "fit": "contain", "alpha": { "mode": "corner", "tolerance": 80 } },
+        { "name": "kestrel_engineer", "region": { "x": 591, "y": 443, "width": 592, "height": 444 }, "fit": "contain", "alpha": { "mode": "corner", "tolerance": 80 } },
+        { "name": "kestrel_sapper", "region": { "x": 0, "y": 443, "width": 591, "height": 444 }, "fit": "contain", "alpha": { "mode": "corner", "tolerance": 80 } },
+        { "name": "kestrel_lancer", "region": { "x": 1183, "y": 0, "width": 591, "height": 443 }, "fit": "contain", "alpha": { "mode": "corner", "tolerance": 80 } },
+        { "name": "kestrel_striker", "region": { "x": 1183, "y": 0, "width": 591, "height": 443 }, "fit": "contain", "alpha": { "mode": "corner", "tolerance": 80 } },
+        { "name": "kestrel_field_rig", "region": { "x": 0, "y": 443, "width": 591, "height": 444 }, "fit": "contain", "alpha": { "mode": "corner", "tolerance": 80 } },
+        { "name": "kestrel_siege_breaker", "region": { "x": 1183, "y": 443, "width": 591, "height": 444 }, "fit": "contain", "alpha": { "mode": "corner", "tolerance": 80 } },
+        { "name": "orison_infantry", "source": "art-handoff/incoming/ChatGPT Image May 4, 2026, 02_11_25 PM.png", "region": { "x": 0, "y": 0, "width": 591, "height": 443 }, "fit": "contain", "alpha": { "mode": "corner", "tolerance": 80 } },
+        { "name": "orison_armor", "source": "art-handoff/incoming/ChatGPT Image May 4, 2026, 02_11_25 PM.png", "region": { "x": 591, "y": 0, "width": 592, "height": 443 }, "fit": "contain", "alpha": { "mode": "corner", "tolerance": 80 } },
+        { "name": "orison_scout", "source": "art-handoff/incoming/ChatGPT Image May 4, 2026, 02_11_25 PM.png", "region": { "x": 1183, "y": 0, "width": 591, "height": 443 }, "fit": "contain", "alpha": { "mode": "corner", "tolerance": 80 } },
+        { "name": "orison_engineer", "source": "art-handoff/incoming/ChatGPT Image May 4, 2026, 02_11_25 PM.png", "region": { "x": 1183, "y": 443, "width": 591, "height": 444 }, "fit": "contain", "alpha": { "mode": "corner", "tolerance": 80 } },
+        { "name": "orison_sapper", "source": "art-handoff/incoming/ChatGPT Image May 4, 2026, 02_11_25 PM.png", "region": { "x": 0, "y": 443, "width": 591, "height": 444 }, "fit": "contain", "alpha": { "mode": "corner", "tolerance": 80 } },
+        { "name": "orison_lancer", "source": "art-handoff/incoming/ChatGPT Image May 4, 2026, 02_11_25 PM.png", "region": { "x": 591, "y": 443, "width": 592, "height": 444 }, "fit": "contain", "alpha": { "mode": "corner", "tolerance": 80 } },
+        { "name": "orison_striker", "source": "art-handoff/incoming/ChatGPT Image May 4, 2026, 02_11_25 PM.png", "region": { "x": 1183, "y": 0, "width": 591, "height": 443 }, "fit": "contain", "alpha": { "mode": "corner", "tolerance": 80 } },
+        { "name": "orison_field_rig", "source": "art-handoff/incoming/ChatGPT Image May 4, 2026, 02_11_25 PM.png", "region": { "x": 1183, "y": 443, "width": 591, "height": 444 }, "fit": "contain", "alpha": { "mode": "corner", "tolerance": 80 } },
+        { "name": "orison_siege_breaker", "source": "art-handoff/incoming/ChatGPT Image May 4, 2026, 02_11_25 PM.png", "region": { "x": 591, "y": 0, "width": 592, "height": 443 }, "fit": "contain", "alpha": { "mode": "corner", "tolerance": 80 } }
+      ]
+    },
+    {
+      "output": "sprites/art_ui_icons.png",
+      "source": "art-handoff/requests/06-ui-icon-sheet/ChatGPT Image May 2, 2026, 09_45_59 PM.png",
+      "sprite_size": 64,
+      "columns": 12,
+      "sprites": [
+        { "name": "move", "region": { "x": 82, "y": 145, "width": 252, "height": 178 }, "fit": "contain", "alpha": { "mode": "corner", "tolerance": 54 } },
+        { "name": "attack", "region": { "x": 425, "y": 145, "width": 252, "height": 178 }, "fit": "contain", "alpha": { "mode": "corner", "tolerance": 54 } },
+        { "name": "wait", "region": { "x": 765, "y": 145, "width": 252, "height": 178 }, "fit": "contain", "alpha": { "mode": "corner", "tolerance": 54 } },
+        { "name": "capture", "region": { "x": 1106, "y": 145, "width": 252, "height": 178 }, "fit": "contain", "alpha": { "mode": "corner", "tolerance": 54 } },
+        { "name": "repair", "region": { "x": 82, "y": 443, "width": 252, "height": 178 }, "fit": "contain", "alpha": { "mode": "corner", "tolerance": 54 } },
+        { "name": "supply", "region": { "x": 425, "y": 443, "width": 252, "height": 178 }, "fit": "contain", "alpha": { "mode": "corner", "tolerance": 54 } },
+        { "name": "rescue", "region": { "x": 765, "y": 443, "width": 252, "height": 178 }, "fit": "contain", "alpha": { "mode": "corner", "tolerance": 54 } },
+        { "name": "end_turn", "region": { "x": 1106, "y": 443, "width": 252, "height": 178 }, "fit": "contain", "alpha": { "mode": "corner", "tolerance": 54 } },
+        { "name": "terrain_defense", "region": { "x": 82, "y": 720, "width": 252, "height": 178 }, "fit": "contain", "alpha": { "mode": "corner", "tolerance": 54 } },
+        { "name": "objective", "region": { "x": 425, "y": 720, "width": 252, "height": 178 }, "fit": "contain", "alpha": { "mode": "corner", "tolerance": 54 } },
+        { "name": "hq_danger", "region": { "x": 765, "y": 720, "width": 252, "height": 178 }, "fit": "contain", "alpha": { "mode": "corner", "tolerance": 54 } },
+        { "name": "scout_rescued", "region": { "x": 1106, "y": 720, "width": 252, "height": 178 }, "fit": "contain", "alpha": { "mode": "corner", "tolerance": 54 } }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "mission3-armor-counters-sdxl-nerijs-v2",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.72,
+  "loraStrengthClip": 0.72,
+  "prompt": "six separated tactical game unit and objective sprites for mission 3 armor counters, 16-bit pixel art, orthographic three-quarter top-down camera, all units facing lower-right, consistent pixel scale with mission 1 sprites, thick dark one-pixel-style outline, large simple color regions, transparent-ready silhouettes on plain white background, no cast shadows, no floor plane, Kestrel AT lancer infantry with long shoulder-mounted geology laser, Kestrel trail striker low fast bike, Kestrel damaged survey crawler objective vehicle with patched engine housing, Orison breach lancer with angular anti-armor weapon and orange accent, Orison hunter bike with sharp pursuit profile, Orison line armor column vehicle, each sprite centered with 15 percent padding, readable after downscaling to 64x64, no labels, no grid",
+  "negativePrompt": "text, letters, numbers, labels, captions, watermark, logo, visible grid, UI card, menu frame, border, reference sheet labels, character portrait, photorealistic, 3d render, painterly, dramatic perspective, side view, floor plane, cast shadow, smoke, glow bloom, tiny limbs, thin antennae, loose cables, cropped unit, overlapping units, inconsistent scale, blurry, noisy dithering, environment, road, buildings",
+  "width": 1152,
+  "height": 768,
+  "steps": 26,
+  "cfg": 5.8,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 50300,
+  "candidateCount": 3,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/mission3-armor-counters-sdxl-nerijs-v2"
+}

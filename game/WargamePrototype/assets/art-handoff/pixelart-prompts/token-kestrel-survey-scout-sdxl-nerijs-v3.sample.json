@@ -1,0 +1,21 @@
+{
+  "name": "token-kestrel-survey-scout-sdxl-nerijs-v3",
+  "model": "sd_xl_base_1.0.safetensors",
+  "lora": "pixel-art-xl.safetensors",
+  "loraStrengthModel": 0.68,
+  "loraStrengthClip": 0.68,
+  "prompt": "one low compact Kestrel four-wheel survey scout buggy token only, no weapon, no long antenna, no mast, no lance, three-quarter top-down from above, facing lower-right, short squat chassis, wheels inside crop, lower and narrower than utility armor, teal sensor strip integrated into nose, blue-gray body, tan side panels, thick dark outline, clean simple silhouette, centered on pure flat magenta background, limited 16-bit tactical pixel art, fills most of square crop, must read as one fast scout vehicle at 64x64 over busy terrain",
+  "negativePrompt": "long pole, sword, lance, cannon barrel, antenna boom, magenta shadow, duplicated buggy, UI frame, vehicle sheet, parts diagram, side elevation, front elevation, multiple views, exploded view, white background, gray background, road, terrain, floor, room, garage, scenic background, card, border, frame, text, labels, numbers, watermark, tiny vehicle, cropped wheels, human portrait, motorcycle, aircraft, photorealistic, 3d render, painterly, soft blur, bloom, glow, smoke, cast shadow",
+  "width": 640,
+  "height": 640,
+  "steps": 28,
+  "cfg": 5.5,
+  "sampler": "euler",
+  "scheduler": "normal",
+  "seedStart": 57900,
+  "candidateCount": 4,
+  "batchSize": 1,
+  "timeoutMinutes": 20,
+  "serverUrl": "http://127.0.0.1:8188",
+  "outputDirectory": "game/WargamePrototype/assets/art-handoff/local-candidates/token-kestrel-survey-scout-sdxl-nerijs-v3"
+}
